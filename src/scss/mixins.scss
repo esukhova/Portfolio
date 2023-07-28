@@ -1,0 +1,85 @@
+@mixin section($height, $flex-direction, $flex-direction-600) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  height: $height;
+  flex-direction: $flex-direction;
+}
+
+@mixin divs($bgColorDivLeft, $bgColorDivRight) {
+  .leftDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $bgColorDivLeft;
+    height: 100%;
+    flex: 0 0 29%;
+    text-align: center;
+  }
+
+  .rightDiv {
+    background: $bgColorDivRight;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex: 0 0 71%;
+  }
+}
+
+@mixin font-size1 {
+  font-size: 2.5vh;
+  h2 {
+    font-size: 3vh;
+  }
+
+  @media (max-height: 320px) {
+    font-size: 3.5vh;
+    h2 {
+      font-size: 5vh;
+    }
+  }
+
+  @media (min-width: 600px) {
+    font-size: 3.5vh;
+    h2 {
+      font-size: 5vh;
+    }
+  }
+
+  @media (min-width: 900px) {
+    font-size: 3.5vh;
+    h2 {
+      font-size: 5vh;
+    }
+  }
+
+  @media (min-width: 1000px) {
+    font-size: 2.5vh;
+    h2 {
+      font-size: 3vh;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 2.5vh;
+    h2 {
+      font-size: 4vh;
+    }
+  }
+
+  @media (max-width: 1200px) and (min-height: 1000px) {
+    font-size: 1.8vh;
+    h2 {
+      font-size: 3vh;
+    }
+  }
+
+  @media (min-height: 1600px) {
+    font-size: 1vh;
+    h2 {
+      font-size: 1.5vh;
+    }
+  }
+}
