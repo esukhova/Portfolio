@@ -161,6 +161,8 @@ header {
   }
 }
 
+/*---ABOUT-----------------------------------------------------------------------------------*/
+
 div#about {
   @include section(auto, row, row);
   @include divs($bgColor2, $bgColor3);
@@ -180,10 +182,7 @@ div#about {
   }
 
   .rightDiv p {
-    background: linear-gradient(
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5)
-    );
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
     padding: 2vh;
     font-weight: 700;
     transition: all 0.8s ease 0s;
@@ -218,6 +217,8 @@ div#about {
     }
   }
 }
+
+/*---STACK-------------------------------------------------------------------------------------*/
 
 div#stack {
   @include section(30vh, row, row);
@@ -290,6 +291,8 @@ div#stack {
   }
 }
 
+/*---PET-------------------------------------------------------------------------------------*/
+
 div#pet {
   @include section(auto, column, column);
   @include font-size1;
@@ -304,16 +307,16 @@ div#pet {
   .pet-container {
     display: flex;
     flex-wrap: wrap;
-    width: 90%;
+    width: 80%;
     justify-content: center;
     overflow: hidden;
   }
 
   .pet {
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(236, 223, 223, 0.521);
     margin: 1.8vw;
-    width: 28%;
-    height: auto;
+    flex: 0 0 28%;
+    min-height: 100%;
     padding-bottom: 3vh;
     border: 4px solid $bgColor7;
     border-radius: 25px;
@@ -321,118 +324,161 @@ div#pet {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transform: scale(0.8);
-    opacity: 0;
+    text-align: center;
     transition: all 0.8s ease;
+    position: relative;
+    opacity: 0;
+    transform: translate(0, 100%);
   }
 
   .pet._active {
-    transform: scale(1);
     opacity: 1;
+    transform: translate(0, 0);
+  }
+
+  a {
+    width: 50%;
+    margin: 10px;
   }
 
   img {
-    width: 80%;
-    margin: 1.5vh 10%;
-    border: 5px solid $bgColor2;
+    width: 100%;
+    height: 100%;
+    border: 1vw solid $bgColor2;
     border-radius: 50%;
     transition: transform 0.5s;
     &:hover {
       transform: scale(1.05);
-      border: 5px solid $bgColor6;
+      border: 1vw solid $bgColor6;
     }
     &:active {
-      border: 5px solid $bgColor5;
+      border: 1vw solid $bgColor5;
     }
+  }
+
+  .description {
+    padding: 5px 25px 30px;
+    text-align: center;
+    height: 100%;
+    color: $bgColor;
+    display: flex;
+    align-items: center;
   }
 
   .statistics {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
     display: flex;
     width: 80%;
-    height: 7px;
+    height: 8px;
     background: $bgColor2;
-    border-radius: 10px;
+    border-radius: 8px;
     overflow: hidden;
     border: 1px solid $bgColor;
-    transform: translate(0, 120%);
+    transform: translate(-50%, 120%);
     opacity: 0;
   }
   .statistics._active {
-    transform: translate(0, 0);
+    transform: translate(-50%, 0);
     opacity: 1;
-    transition: all 0.8s ease 0.8s;
+    transition: all 0.8s ease 0.3s;
+  }
+
+  .statistics-HTML {
+    background-color: $bgColor5;
+  }
+  .statistics-CSS {
+    background-color: green;
+  }
+  .statistics-JS {
+    background-color: yellow;
   }
 
   #statistics-1-HTML {
-    background-color: $bgColor5;
     width: 49.9%;
   }
-
   #statistics-1-CSS {
-    background-color: green;
     width: 46.8%;
   }
   #statistics-1-JS {
-    background-color: yellow;
     width: 3.3%;
   }
   #statistics-2-HTML {
-    background-color: $bgColor5;
     width: 24%;
   }
   #statistics-2-CSS {
-    background-color: green;
     width: 20.8%;
   }
   #statistics-2-JS {
-    background-color: yellow;
     width: 55.2%;
   }
   #statistics-3-HTML {
-    background-color: $bgColor5;
     width: 7.4%;
   }
   #statistics-3-CSS {
-    background-color: green;
     width: 36%;
   }
   #statistics-3-JS {
-    background-color: yellow;
     width: 56.6%;
   }
   #statistics-4-HTML {
-    background-color: $bgColor5;
-    width: 20%;
+    width: 26.5%;
   }
   #statistics-4-CSS {
-    background-color: green;
-    width: 30%;
+    width: 64.9%;
   }
   #statistics-4-JS {
-    background-color: yellow;
-    width: 50%;
+    width: 8.6%;
+  }
+  #statistics-5-HTML {
+    width: 52%;
+  }
+  #statistics-5-CSS {
+    width: 48%;
+  }
+  #statistics-5-JS {
+    width: 0%;
+  }
+  #statistics-6-HTML {
+    width: 37.7%;
+  }
+  #statistics-6-CSS {
+    width: 57.2%;
+  }
+  #statistics-6-JS {
+    width: 5.1%;
   }
 
   ul {
     display: flex;
-    padding: 0;
-    text-align: center;
+    padding: 5px;
   }
 
   li {
-    display: inline;
+    text-align: center;
+    display: inline-flex;
+    justify-content: flex-start;
+    text-align: center;
     color: $bgColor6;
     position: relative;
-    padding-left: 3vh;
-    margin-left: 3vh;
+    margin: 0 50px 0 0px;
+    align-items: center;
+    flex: 1 1 33.333%;
+    white-space: nowrap;
+  }
+
+  li:last-child {
+    margin: 0 0 0 0px;
   }
 
   li::before {
     position: absolute;
     width: 10px;
     height: 10px;
-    top: 0%;
-    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: -20px;
     content: "";
     border-radius: 50%;
     border: 2px solid $bgColor;
@@ -450,63 +496,41 @@ div#pet {
     background: yellow;
   }
 
-  @media (min-height: 600px) {
-    li::before {
-      top: 2.5px;
+  @media (max-width: 992px) {
+    .pet {
+      flex: 0 0 40%;
     }
   }
-
-  @media (min-height: 900px) {
-    li::before {
-      top: 7px;
+  @media (max-width: 600px) {
+    .pet {
+      flex: 0 0 100%;
     }
   }
-
-  @media (min-height: 1600px) {
-    li::before {
-      top: 0px;
-    }
-  }
-
-  @media (min-width: 500px) {
+  @media (min-width: 992px) {
     .pet {
       margin: 0.7vw;
-      width: 20vw;
     }
 
     img {
-      width: 12vw;
-      height: 12vw;
-      margin: 3vh;
-      border: 10px solid $bgColor2;
+      border: 0.5vw solid $bgColor2;
 
       &:hover {
-        border: 10px solid $bgColor6;
+        border: 0.5vw solid $bgColor6;
       }
 
       &:active {
-        border: 10px solid $bgColor5;
+        border: 0.5vw solid $bgColor5;
       }
     }
 
     .statistics {
       height: 10px;
-    }
-
-    li {
-      padding-left: 5vh;
-      margin-left: 4vh;
-      width: 18vh;
-      padding-left: 3vh;
-    }
-  }
-
-  @media (min-height: 800px) {
-    li {
-      width: 8vh;
+      border: 2px solid $bgColor;
     }
   }
 }
+
+/*---FOOTER---------------------------------------------------------------------------------*/
 
 footer {
   @include section(25vh, row, row);
