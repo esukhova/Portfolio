@@ -6,6 +6,9 @@ html {
   scrollbar-width: 20px;
   scrollbar-color: $bgColor6 $bgColor4;
   -webkit-tap-highlight-color: transparent;
+  ::selection {
+    background: rgba(225, 220, 220, .8);
+  }
 }
 
 html::-webkit-scrollbar {
@@ -28,12 +31,14 @@ html::-webkit-scrollbar-thumb {
   font-style: normal;
   src: url("/fonts/NTSomic/NTSomic-Bold.otf") format("opentype");
 }
+
 @font-face {
   font-family: NTSomic;
   font-weight: 500;
   font-style: normal;
   src: url("/fonts/NTSomic/NTSomic-Medium.otf") format("opentype");
 }
+
 @font-face {
   font-family: NTSomic;
   font-weight: 400;
@@ -47,18 +52,37 @@ html::-webkit-scrollbar-thumb {
 }
 
 body {
-  background: url("../../public/images/background.svg");
   background-size: cover;
 }
 
-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: $bgColor;
+}
+
+.container {
+  padding: 0 15px;
   margin: 0 auto;
+  max-width: 100%;
+  @media (min-width: 1024px) {
+    max-width: 900px;
+  }
+  @media (min-width: 1920px) {
+    max-width: 1320px;
+  }
+}
+
+header {
   background-color: $bgColor;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
 
   #img-container,
   #h1-container {
@@ -106,11 +130,15 @@ header {
   }
 
   @media (min-width: 600px) and (max-height: 300px) {
-    flex-direction: column;
+    .container {
+      flex-direction: column;
+    }
   }
 
   @media (min-width: 600px) {
-    flex-direction: row;
+    .container {
+      flex-direction: row;
+    }
 
     #img-container,
     #h1-container {
@@ -163,494 +191,534 @@ header {
 
 /*---ABOUT-----------------------------------------------------------------------------------*/
 
-div#about {
-  @include section(auto, row, row);
-  @include divs($bgColor2, $bgColor3);
-  @include font-size1;
+#about {
   border-bottom: 10px solid $bgColor6;
-
-  .leftDiv {
-    flex: 0 0 0%;
-  }
-
-  .rightDiv {
-    flex: 0 0 100%;
-    background: url("../../public/images/background-about.svg");
-    background-size: cover;
-    padding: 1vh 0;
-    overflow: hidden;
-  }
-
-  .rightDiv p {
-    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
-    padding: 2vh;
-    font-weight: 700;
-    transition: all 0.8s ease 0s;
-    transform: translate(0, 120%);
-    opacity: 0;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-  }
-
-  .rightDiv p._active {
-    transform: translate(0, 0);
-    opacity: 1;
-  }
+  background: url("../../public/images/background.svg");
+  background-size: cover;
 
   @media (min-width: 600px) {
+    background: linear-gradient(to right, transparent 50%, $bgColor3 50%, $bgColor3), url("../../public/images/background.svg");
+    background-size: cover;
+  }
+
+  .container {
+    @include section(auto, row, row);
+    @include divs($bgColor2, transparent);
+    @include font-size1;
+
     .leftDiv {
-      flex: 0 0 29%;
+      flex: 0 0 0;
     }
 
     .rightDiv {
-      flex: 0 0 71%;
-      background: $bgColor3;
-      padding: 10px;
+      flex: 0 0 100%;
+      padding: 5px 0;
+      overflow: hidden;
     }
 
     .rightDiv p {
-      display: flex;
-      align-items: center;
-      font-weight: 500;
-      padding: 2vw;
+      background: rgba(255, 255, 255, 0.6);
+      padding: 2vh;
+      font-weight: 700;
+      transition: all 0.8s ease 0s;
+      transform: translate(0, 120%);
+      opacity: 0;
+      height: 100%;
+      width: 100%;
+      margin: 0;
+    }
+
+    .rightDiv p._active {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+
+    @media (min-width: 600px) {
+
+      .leftDiv {
+        flex: 0 0 30%;
+      }
+
+      .rightDiv {
+        flex: 0 0 70%;
+        background: $bgColor3;
+        padding: 10px 0 10px 10px;
+      }
+
+      .rightDiv p {
+        background: rgba(255, 255, 255, 0.4);
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        padding: 2vw;
+        border-radius: 10px;
+        border: 2px solid $bgColor;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .rightDiv p {
+        padding: 20px;
+      }
     }
   }
 }
 
 /*---STACK-------------------------------------------------------------------------------------*/
 
-div#stack {
-  @include section(30vh, row, row);
-  @include divs($bgColor4, $bgColor2);
-  @include font-size1;
+#stack {
+  background: linear-gradient(to right, $bgColor4 50%, $bgColor2 50%, $bgColor2);
   border-bottom: 10px solid $bgColor4;
 
-  h2 {
-    color: $bgColor;
-    margin: 2vh;
-  }
+  .container {
+    @include section(auto, row, row);
+    @include divs($bgColor4, $bgColor2);
+    @include font-size1;
 
-  .rightDiv {
-    flex-wrap: wrap;
-    align-content: center;
-    padding-left: 10px;
+    h2 {
+      color: $bgColor;
+      margin: 0;
+    }
 
-    &._active .stack-item {
-      @for $var from 1 to 10 {
-        $delay: $var * 0.1;
-        $translate: $var * 10;
-        &:nth-child(#{$var}) {
-          @if $var==1 {
-            transition: all 1.5s ease 0s;
-          } @else {
-            transition: all 1.5s ease #{$delay + s};
+    .rightDiv {
+      flex-wrap: wrap;
+      align-content: center;
+      padding: 10px;
+
+      &._active .stack-item {
+        @for $var from 1 to 12 {
+          $delay: $var * 0.1;
+          $translate: $var * 10;
+          &:nth-child(#{$var}) {
+            @if $var==1 {
+              transition: all 1.5s ease 0s;
+            } @else {
+              transition: all 1.5s ease #{$delay + s};
+            }
+            margin: 3px;
           }
-          margin: 3px;
         }
       }
     }
-  }
 
-  .stack-item {
-    color: $bgColor;
-    margin: 0px;
-    padding: 1vh;
-    background: $bgColor5;
-    border-radius: 1vh;
-    border: 2px solid $bgColor;
-    font-weight: 500;
-  }
-
-  @media (max-height: 300px) {
     .stack-item {
-      padding: 0.6vh;
+      color: $bgColor;
+      margin: 0;
+      padding: 1vh;
+      background: $bgColor5;
+      border-radius: 1vh;
+      border: 2px solid $bgColor;
+      font-weight: 500;
     }
-  }
 
-  @media (max-width: 450px) {
-    .stack-item {
-      padding: 0.5vh;
+    @media (max-height: 300px) {
+      .stack-item {
+        padding: 0.6vh;
+      }
     }
-  }
 
-  @media (min-width: 600px) {
-    height: 20vh;
-  }
-
-  @media (min-width: 1800px) {
-    height: 15vh;
-  }
-
-  @media (min-height: 1200px) {
-    height: 22vh;
-  }
-
-  @media (min-height: 1600px) {
-    height: 10vh;
+    @media (max-width: 450px) {
+      .stack-item {
+        padding: 0.5vh;
+      }
+    }
   }
 }
 
 /*---PET-------------------------------------------------------------------------------------*/
 
-div#pet {
-  @include section(auto, column, column);
-  @include font-size1;
+#pet {
   background: $bgColor;
   border-bottom: 10px solid $bgColor6;
   padding-bottom: 1vh;
 
-  h2 {
-    color: $bgColor6;
-  }
+  .container {
+    @include section(auto, column, column);
+    @include font-size1;
 
-  .pet-container {
-    display: flex;
-    flex-wrap: wrap;
-    width: 80%;
-    justify-content: center;
-    overflow: hidden;
-  }
-
-  .pet {
-    background: rgba(236, 223, 223, 0.521);
-    margin: 1.8vw;
-    flex: 0 0 28%;
-    min-height: 100%;
-    padding-bottom: 3vh;
-    border: 4px solid $bgColor7;
-    border-radius: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    transition: all 0.8s ease;
-    position: relative;
-    opacity: 0;
-    transform: translate(0, 100%);
-  }
-
-  .pet._active {
-    opacity: 1;
-    transform: translate(0, 0);
-  }
-
-  a {
-    width: 50%;
-    margin: 10px;
-  }
-
-  img {
-    width: 100%;
-    height: 100%;
-    border: 1vw solid $bgColor2;
-    border-radius: 50%;
-    transition: transform 0.5s;
-    &:hover {
-      transform: scale(1.05);
-      border: 1vw solid $bgColor6;
+    h2 {
+      color: $bgColor6;
     }
-    &:active {
-      border: 1vw solid $bgColor5;
+
+    .pet-container {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      justify-content: flex-start;
+      overflow: hidden;
+      gap: 10px;
     }
-  }
 
-  .description {
-    padding: 5px 25px 30px;
-    text-align: center;
-    height: 100%;
-    color: $bgColor;
-    display: flex;
-    align-items: center;
-  }
-
-  .statistics {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    display: flex;
-    width: 80%;
-    height: 8px;
-    background: $bgColor2;
-    border-radius: 8px;
-    overflow: hidden;
-    border: 1px solid $bgColor;
-    transform: translate(-50%, 120%);
-    opacity: 0;
-  }
-  .statistics._active {
-    transform: translate(-50%, 0);
-    opacity: 1;
-    transition: all 0.8s ease 0.3s;
-  }
-
-  .statistics-HTML {
-    background-color: $bgColor5;
-  }
-  .statistics-CSS {
-    background-color: green;
-  }
-  .statistics-JS {
-    background-color: yellow;
-  }
-
-  #statistics-1-HTML {
-    width: 49.9%;
-  }
-  #statistics-1-CSS {
-    width: 46.8%;
-  }
-  #statistics-1-JS {
-    width: 3.3%;
-  }
-  #statistics-2-HTML {
-    width: 24%;
-  }
-  #statistics-2-CSS {
-    width: 20.8%;
-  }
-  #statistics-2-JS {
-    width: 55.2%;
-  }
-  #statistics-3-HTML {
-    width: 7.4%;
-  }
-  #statistics-3-CSS {
-    width: 36%;
-  }
-  #statistics-3-JS {
-    width: 56.6%;
-  }
-  #statistics-4-HTML {
-    width: 26.5%;
-  }
-  #statistics-4-CSS {
-    width: 64.9%;
-  }
-  #statistics-4-JS {
-    width: 8.6%;
-  }
-  #statistics-5-HTML {
-    width: 52%;
-  }
-  #statistics-5-CSS {
-    width: 48%;
-  }
-  #statistics-5-JS {
-    width: 0%;
-  }
-  #statistics-6-HTML {
-    width: 37.7%;
-  }
-  #statistics-6-CSS {
-    width: 57.2%;
-  }
-  #statistics-6-JS {
-    width: 5.1%;
-  }
-
-  ul {
-    display: flex;
-    padding: 5px;
-  }
-
-  li {
-    text-align: center;
-    display: inline-flex;
-    justify-content: flex-start;
-    text-align: center;
-    color: $bgColor6;
-    position: relative;
-    margin: 0 50px 0 0px;
-    align-items: center;
-    flex: 1 1 33.333%;
-    white-space: nowrap;
-  }
-
-  li:last-child {
-    margin: 0 0 0 0px;
-  }
-
-  li::before {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    top: 50%;
-    transform: translate(0, -50%);
-    left: -20px;
-    content: "";
-    border-radius: 50%;
-    border: 2px solid $bgColor;
-  }
-
-  #red::before {
-    background: $bgColor5;
-  }
-
-  #green::before {
-    background: green;
-  }
-
-  #yellow::before {
-    background: yellow;
-  }
-
-  @media (max-width: 992px) {
     .pet {
-      flex: 0 0 40%;
+      background: rgba(236, 223, 223, 0.521);
+      margin: 0;
+      flex: 0 0 calc(25% - 8px);
+      min-height: 100%;
+      padding: 30px 0;
+      border: 4px solid $bgColor7;
+      border-radius: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      transition: all 0.8s ease;
+      position: relative;
+      opacity: 0;
+      transform: translate(0, 100%);
     }
-  }
-  @media (max-width: 600px) {
-    .pet {
-      flex: 0 0 100%;
+
+    .pet._active {
+      opacity: 1;
+      transform: translate(0, 0);
     }
-  }
-  @media (min-width: 992px) {
-    .pet {
-      margin: 0.7vw;
+
+    a {
+      width: 50%;
+      margin: 10px;
     }
 
     img {
-      border: 0.5vw solid $bgColor2;
+      width: 90%;
+      border: 10px solid $bgColor2;
+      border-radius: 50%;
+      transition: all 0.5s;
 
       &:hover {
-        border: 0.5vw solid $bgColor6;
+        transform: scale(1.05);
+        border-color: $bgColor6;
       }
 
       &:active {
-        border: 0.5vw solid $bgColor5;
+        border-color: $bgColor5;
       }
     }
 
+    .description {
+      padding: 5px 25px 30px;
+      text-align: center;
+      height: 100%;
+      color: $bgColor;
+      display: flex;
+      align-items: center;
+    }
+
     .statistics {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      display: flex;
+      width: 80%;
       height: 10px;
+      background: $bgColor2;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid $bgColor;
+      transform: translate(-50%, 120%);
+      opacity: 0;
+    }
+
+    .statistics._active {
+      transform: translate(-50%, 0);
+      opacity: 1;
+      transition: all 0.8s ease 0.3s;
+    }
+
+    .statistics-HTML {
+      background-color: $bgColor5;
+    }
+
+    .statistics-CSS {
+      background-color: green;
+    }
+
+    .statistics-JS {
+      background-color: yellow;
+    }
+
+    #statistics-MACAROONS-HTML {
+      width: 38.1%;
+    }
+    #statistics-MACAROONS-CSS {
+      width: 61%;
+    }
+    #statistics-MACAROONS-JS {
+      width: 0.9%;
+    }
+
+    #statistics-Sushi-HTML {
+      width: 48.8%;
+    }
+    #statistics-Sushi-CSS {
+      width: 50.4%;
+    }
+    #statistics-Sushi-JS {
+      width: 0.8%;
+    }
+
+    #statistics-HomeWorks-HTML {
+      width: 26%;
+    }
+    #statistics-HomeWorks-CSS {
+      width: 36.9%;
+    }
+    #statistics-HomeWorks-JS {
+      width: 37.1%;
+    }
+
+    #statistics-LOFI-HTML {
+      width: 49.9%;
+    }
+
+    #statistics-LOFI-CSS {
+      width: 46.8%;
+    }
+
+    #statistics-LOFI-JS {
+      width: 3.3%;
+    }
+
+    #statistics-Hangman-HTML {
+      width: 24%;
+    }
+
+    #statistics-Hangman-CSS {
+      width: 20.8%;
+    }
+
+    #statistics-Hangman-JS {
+      width: 55.2%;
+    }
+
+    #statistics-calculator-HTML {
+      width: 7.4%;
+    }
+
+    #statistics-calculator-CSS {
+      width: 36%;
+    }
+
+    #statistics-calculator-JS {
+      width: 56.6%;
+    }
+
+    #statistics-Global-HTML {
+      width: 26.5%;
+    }
+
+    #statistics-Global-CSS {
+      width: 64.9%;
+    }
+
+    #statistics-Global-JS {
+      width: 8.6%;
+    }
+
+    #statistics-Relvise-HTML {
+      width: 51.7%;
+    }
+
+    #statistics-Relvise-CSS {
+      width: 47.5%;
+    }
+
+    #statistics-Relvise-JS {
+      width: 0.8%;
+    }
+
+    #statistics-GoCorona-HTML {
+      width: 37.7%;
+    }
+
+    #statistics-GoCorona-CSS {
+      width: 57.2%;
+    }
+
+    #statistics-GoCorona-JS {
+      width: 5.1%;
+    }
+
+    ul {
+      display: flex;
+      padding: 5px;
+    }
+
+    li {
+      text-align: center;
+      display: inline-flex;
+      justify-content: flex-start;
+      color: $bgColor6;
+      position: relative;
+      margin: 0 50px 0 0;
+      align-items: center;
+      flex: 1 1 33.333%;
+      white-space: nowrap;
+    }
+
+    li:last-child {
+      margin: 0;
+    }
+
+    li::before {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      top: 50%;
+      transform: translate(0, -50%);
+      left: -20px;
+      content: "";
+      border-radius: 50%;
       border: 2px solid $bgColor;
     }
+
+    #red::before {
+      background: $bgColor5;
+    }
+
+    #green::before {
+      background: green;
+    }
+
+    #yellow::before {
+      background: yellow;
+    }
+
+    @media (max-width: 992px) {
+      .pet {
+        flex: 0 0 calc(33.3% - 7px);
+      }
+    }
+    @media (max-width: 768px) {
+      .pet {
+        flex: 0 0 calc(50% - 5px);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .pet {
+        flex: 0 0 calc(50% - 5px);
+      }
+
+      .statistics {
+        border: 2px solid $bgColor;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .pet {
+        flex: 0 0 100%;
+      }
+    }
   }
+
 }
+
 
 /*---FOOTER---------------------------------------------------------------------------------*/
 
 footer {
-  @include section(25vh, row, row);
-  @include divs($bgColor2, $bgColor7);
-  @include font-size1;
   border-bottom: 10px solid $bgColor5;
-  color: $bgColor;
+  background: $bgColor7;
 
-  .leftDiv {
-    justify-items: center;
-  }
-
-  .address-item-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    &._active .address-item {
-      @for $var from 1 to 4 {
-        $delay: $var * 0.1;
-        $translate: $var * 10;
-        &:nth-child(#{$var}) {
-          @if $var==1 {
-            transition: margin 1.5s ease 0s;
-          } @else {
-            transition: margin 1.5s ease #{$delay + s};
-          }
-          margin: 0.32vh;
-          &:hover {
-            transform: scale(1.1);
-            transition: all 0.4s;
-          }
-        }
-      }
-    }
-  }
-
-  .address-item {
-    margin: 0;
-    background: $bgColor;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 5.7vh;
-    height: 5.7vh;
-    border-radius: 50%;
-  }
-
-  img {
-    width: 3vh;
-    height: 3vh;
-  }
-
-  .rightDiv {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 2.5vh;
-  }
-
-  address {
-    font-style: normal;
-    font-weight: 700;
-  }
-
-  .address-item-container._active .address-item {
-    @for $var from 1 to 4 {
-      $delay: $var * 0.1;
-      $translate: $var * 10;
-      &:nth-child(#{$var}) {
-        @if $var==1 {
-          transition: margin 1.5s ease 0s;
-        } @else {
-          transition: margin 1.5s ease #{$delay + s};
-        }
-        margin: 0.32vw;
-      }
-    }
-  }
-
-  @media (min-width: 500px) {
-    height: 20vh;
+  .container {
+    @include section(auto, row, row);
+    @include divs($bgColor2, $bgColor7);
+    @include font-size1;
+    color: $bgColor;
+    padding: 0;
 
     .address-item-container {
-      flex-direction: row;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &._active .address-item {
+        @for $var from 1 to 5 {
+          $delay: $var * 0.1;
+          $translate: $var * 10;
+          &:nth-child(#{$var}) {
+            @if $var==1 {
+              transition: margin 1.5s ease 0s;
+            } @else {
+              transition: margin 1.5s ease #{$delay + s};
+            }
+            margin: 0.32vh;
+
+            &:hover {
+              transform: scale(1.1);
+              transition: all 0.4s;
+            }
+          }
+        }
+      }
     }
 
     .address-item {
-      width: 6vw;
-      height: 6vw;
+      margin: 0;
+      background: $bgColor;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 5.7vh;
+      height: 5.7vh;
+      border-radius: 50%;
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60%;
+        height: 60%;
+      }
     }
 
     img {
-      width: 3vw;
-      height: 3vw;
+      width: 100%;
+      height: 100%;
     }
 
     .rightDiv {
-      flex-direction: row;
-      align-items: center;
-      padding: 0 3vw;
-    }
-  }
+      display: block;
 
-  @media (min-width: 1000px) {
-    .address-item {
-      width: 3.5vw;
-      height: 3.5vw;
+      p {
+        padding: 10px;
+        margin: 0;
+      }
     }
 
-    img {
-      width: 2vw;
-      height: 2vw;
+    address {
+      display: inline;
+      font-style: normal;
+      font-weight: 700;
     }
-  }
 
-  @media (min-height: 900px) {
-    height: 20vh;
-  }
+    @media (min-width: 500px) {
 
-  @media (min-height: 1000px) {
-    height: 15vh;
+      .address-item-container {
+        flex-direction: row;
+      }
+
+      .address-item {
+        width: 6vw;
+        height: 6vw;
+      }
+
+      .rightDiv {
+        flex-direction: row;
+        align-items: center;
+        padding: 0 3vw;
+      }
+    }
+
+    @media (min-width: 1000px) {
+      .address-item {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+  }
+  @media (min-width: 500px) {
+    background: linear-gradient(to right, white 50%, $bgColor7 50%, $bgColor7);
   }
 }
