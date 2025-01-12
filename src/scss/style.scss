@@ -9,6 +9,7 @@ html {
   ::selection {
     background: rgba(225, 220, 220, .8);
   }
+  scroll-behavior: smooth;
 }
 
 html::-webkit-scrollbar {
@@ -193,11 +194,11 @@ header {
 
 #about {
   border-bottom: 10px solid $bgColor6;
-  background: url("../../public/images/background.svg");
+  background: url("../../images/background.svg");
   background-size: cover;
 
   @media (min-width: 600px) {
-    background: linear-gradient(to right, transparent 50%, $bgColor3 50%, $bgColor3), url("../../public/images/background.svg");
+    background: linear-gradient(to right, transparent 50%, $bgColor3 50%, $bgColor3), url("../../images/background.svg");
     background-size: cover;
   }
 
@@ -226,6 +227,11 @@ header {
       height: 100%;
       width: 100%;
       margin: 0;
+
+      a {
+        color: $color3;
+        text-shadow: 0 0 10px $color;
+      }
     }
 
     .rightDiv p._active {
@@ -247,8 +253,6 @@ header {
 
       .rightDiv p {
         background: rgba(255, 255, 255, 0.4);
-        display: flex;
-        align-items: center;
         font-weight: 500;
         padding: 2vw;
         border-radius: 10px;
@@ -286,7 +290,7 @@ header {
       padding: 10px;
 
       &._active .stack-item {
-        @for $var from 1 to 12 {
+        @for $var from 1 to 20 {
           $delay: $var * 0.1;
           $translate: $var * 10;
           &:nth-child(#{$var}) {
@@ -365,7 +369,7 @@ header {
       transition: all 0.8s ease;
       position: relative;
       opacity: 0;
-      transform: translate(0, 100%);
+      //transform: translate(0, 100%);
     }
 
     .pet._active {
@@ -437,13 +441,23 @@ header {
     }
 
     #statistics-MACAROONS-HTML {
-      width: 38.1%;
+      width: 27.4%;
     }
     #statistics-MACAROONS-CSS {
-      width: 61%;
+      width: 58.8%;
     }
     #statistics-MACAROONS-JS {
-      width: 0.9%;
+      width: 13.8%;
+    }
+
+    #statistics-Barbershop-HTML {
+      width: 27.5%;
+    }
+    #statistics-Barbershop-CSS {
+      width: 63.2%;
+    }
+    #statistics-Barbershop-JS {
+      width: 9.3%;
     }
 
     #statistics-Sushi-HTML {
@@ -476,6 +490,18 @@ header {
 
     #statistics-LOFI-JS {
       width: 3.3%;
+    }
+
+    #statistics-NFT-HTML {
+      width: 20.8%;
+    }
+
+    #statistics-NFT-CSS {
+      width: 64.1%;
+    }
+
+    #statistics-NFT-JS {
+      width: 15.1%;
     }
 
     #statistics-Hangman-HTML {
