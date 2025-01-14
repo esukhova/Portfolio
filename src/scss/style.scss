@@ -213,7 +213,7 @@ header {
             $bgColor7 15%, $bgColor7 25%,
             $bgColor2 25%, $bgColor2 33%,
             $bgColor7 33%, $bgColor7 calc(33% + 10px),
-            rgba(10, 10, 10, 0.8) calc(33% + 10px), rgba(10, 10, 10, 0.8) 90%, $bgColor6 90%, $bgColor6 calc(90% + 30px), $bgColor4 calc(90% + 30px)), url('images/background-about.jpg');
+            rgba(10, 10, 10, 0.8) calc(33% + 10px), rgba(10, 10, 10, 0.8) 90%, $bgColor6 90%, $bgColor6 calc(90% + 30px), $bgColor4 calc(90% + 30px)), url('/images/background-about.jpg');
     background-size: cover;
   }
 
@@ -376,7 +376,7 @@ header {
 /*---PET-------------------------------------------------------------------------------------*/
 
 #pet {
-  background: linear-gradient(rgba(10, 10, 10, 0.7) 0, rgba(10, 10, 10, 0.7) 0), url('images/background-pet.jpg');
+  background: linear-gradient(rgba(10, 10, 10, 0.7) 0, rgba(10, 10, 10, 0.7) 0), url('/images/background-pet.jpg');
   border-bottom: 10px solid $bgColor6;
   padding-bottom: 1vh;
 
