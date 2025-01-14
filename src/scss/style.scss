@@ -1,14 +1,17 @@
 @import "normalize.css";
 @import "variables.scss";
 @import "mixins.scss";
+@import "animations.scss";
 
 html {
   scrollbar-width: 20px;
   scrollbar-color: $bgColor6 $bgColor4;
   -webkit-tap-highlight-color: transparent;
+
   ::selection {
     background: rgba(225, 220, 220, .8);
   }
+
   scroll-behavior: smooth;
 }
 
@@ -74,6 +77,9 @@ a {
   }
 }
 
+
+/*---HEADER-----------------------------------------------------------------------------------*/
+
 header {
   background-color: $bgColor;
 
@@ -95,6 +101,7 @@ header {
     padding: 0;
   }
 
+
   #h1-container {
     justify-content: flex-start;
     align-items: flex-start;
@@ -102,22 +109,25 @@ header {
   }
 
   img {
-    transition: all 0.8s ease;
     width: 30vh;
+    transition: all 0.1s ease 0s;
+    &:hover {
+      filter: drop-shadow(0 0 0.8rem #fae2b6);
+    }
   }
 
   h1,
   #subheading {
     font-size: 2.5vh;
-    margin: 5px;
+    margin: 0;
     color: $bgColor2;
     font-weight: 700;
-    transition: all 0.8s ease;
     text-align: left;
   }
 
   h1 {
     font-size: 3vh;
+    margin: calc(5px + 1vh);
   }
 
   @media (max-height: 320px) {
@@ -193,12 +203,17 @@ header {
 /*---ABOUT-----------------------------------------------------------------------------------*/
 
 #about {
+  border-top: 10px solid $bgColor3;
   border-bottom: 10px solid $bgColor6;
-  background: url("/images/background.svg");
+  background: repeating-linear-gradient(120deg, #ff7494 0, #ff7494 5%, #ffffff 5%, #ffffff 10%);
   background-size: cover;
 
   @media (min-width: 600px) {
-    background: linear-gradient(to right, transparent 50%, $bgColor3 50%, $bgColor3), url("../../images/background.svg");
+    background: linear-gradient(120deg, $bgColor3 7%, $bgColor2 7%, $bgColor2 15%,
+            $bgColor7 15%, $bgColor7 25%,
+            $bgColor2 25%, $bgColor2 33%,
+            $bgColor7 33%, $bgColor7 calc(33% + 10px),
+            rgba(10, 10, 10, 0.8) calc(33% + 10px), rgba(10, 10, 10, 0.8) 90%, $bgColor6 90%, $bgColor6 calc(90% + 30px), $bgColor4 calc(90% + 30px)), url('images/background-about.jpg');
     background-size: cover;
   }
 
@@ -218,7 +233,7 @@ header {
     }
 
     .rightDiv p {
-      background: rgba(255, 255, 255, 0.6);
+      background: rgba(255, 255, 255, 0.9);
       padding: 2vh;
       font-weight: 700;
       transition: all 0.8s ease 0s;
@@ -227,6 +242,8 @@ header {
       height: 100%;
       width: 100%;
       margin: 0;
+      border-radius: 10px;
+      border: 2px solid $bgColor;
 
       a {
         color: $color3;
@@ -247,16 +264,13 @@ header {
 
       .rightDiv {
         flex: 0 0 70%;
-        background: $bgColor3;
         padding: 10px 0 10px 10px;
       }
 
       .rightDiv p {
-        background: rgba(255, 255, 255, 0.4);
+        background: $bgColor8;
         font-weight: 500;
         padding: 2vw;
-        border-radius: 10px;
-        border: 2px solid $bgColor;
       }
     }
 
@@ -271,17 +285,47 @@ header {
 /*---STACK-------------------------------------------------------------------------------------*/
 
 #stack {
-  background: linear-gradient(to right, $bgColor4 50%, $bgColor2 50%, $bgColor2);
+  background: linear-gradient(60deg, $bgColor4 10vw,
+          black 10vw, calc(10vw + 10px),
+          $bgColor calc(10vw + 10px), $bgColor calc(10vw + 20px),
+          $bgColor4 calc(10vw + 20px), $bgColor4 calc(10vw + 30px),
+          black calc(10vw + 30px), black calc(27vw + 40px),
+          $bgColor2 calc(27vw + 40px));
+  background-size: cover;
   border-bottom: 10px solid $bgColor4;
 
   .container {
     @include section(auto, row, row);
-    @include divs($bgColor4, $bgColor2);
+    @include divs(transparent, $bgColor2);
     @include font-size1;
 
     h2 {
-      color: $bgColor;
+      color: $bgColor2;
       margin: 0;
+    }
+
+    .wrapper {
+      position: relative;
+
+      &:before {
+        position: absolute;
+        content: '';
+        top: -33%;
+        right: 50%;
+        width: 70%;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background: $bgColor3;
+      }
+    }
+
+    .gradient-text {
+      background: linear-gradient(150deg, #086868 20%, #001439 50%, #225a6e 80%);
+      animation: none;
+    }
+
+    .gradient {
+      background: linear-gradient(150deg, #086868 20%, #001439 50%, #225a6e 80%);
     }
 
     .rightDiv {
@@ -311,7 +355,7 @@ header {
       padding: 1vh;
       background: $bgColor5;
       border-radius: 1vh;
-      border: 2px solid $bgColor;
+      border: 0.3vh solid $bgColor;
       font-weight: 500;
     }
 
@@ -323,7 +367,7 @@ header {
 
     @media (max-width: 450px) {
       .stack-item {
-        padding: 0.5vh;
+        padding: 0.7vh;
       }
     }
   }
@@ -332,7 +376,7 @@ header {
 /*---PET-------------------------------------------------------------------------------------*/
 
 #pet {
-  background: $bgColor;
+  background: linear-gradient(rgba(10, 10, 10, 0.7) 0, rgba(10, 10, 10, 0.7) 0), url('images/background-pet.jpg');
   border-bottom: 10px solid $bgColor6;
   padding-bottom: 1vh;
 
@@ -342,6 +386,7 @@ header {
 
     h2 {
       color: $bgColor6;
+      font-size: 5vh;
     }
 
     .pet-container {
@@ -349,17 +394,17 @@ header {
       flex-wrap: wrap;
       width: 100%;
       justify-content: flex-start;
-      overflow: hidden;
-      gap: 10px;
+      gap: 20px;
     }
 
     .pet {
-      background: rgba(236, 223, 223, 0.521);
+      font-weight: 700;
+      background: rgba(53, 51, 51, 0.8);
       margin: 0;
-      flex: 0 0 calc(25% - 8px);
+      flex: 0 0 calc(25% - 15px);
       min-height: 100%;
       padding: 30px 0;
-      border: 4px solid $bgColor7;
+      box-shadow: 0 0 0 4px $bgColor7, 0 0 0 14px black;
       border-radius: 25px;
       display: flex;
       flex-direction: column;
@@ -386,11 +431,14 @@ header {
       width: 90%;
       border: 10px solid $bgColor2;
       border-radius: 50%;
-      transition: all 0.5s;
+      transition: all 0.1s;
+      background: $bgColor8;
 
       &:hover {
         transform: scale(1.05);
-        border-color: $bgColor6;
+        border-color: #ffe6ff;
+        box-shadow: 0 0 0.3rem #ffe6ff, 0 0 1rem #ffae00;
+        background: $bgColor3;
       }
 
       &:active {
@@ -402,7 +450,7 @@ header {
       padding: 5px 25px 30px;
       text-align: center;
       height: 100%;
-      color: $bgColor;
+      color: $color;
       display: flex;
       align-items: center;
     }
@@ -417,7 +465,7 @@ header {
       background: $bgColor2;
       border-radius: 8px;
       overflow: hidden;
-      border: 1px solid $bgColor;
+      border: 2px solid $bgColor;
       transform: translate(-50%, 120%);
       opacity: 0;
     }
@@ -443,9 +491,11 @@ header {
     #statistics-MACAROONS-HTML {
       width: 27.4%;
     }
+
     #statistics-MACAROONS-CSS {
       width: 58.8%;
     }
+
     #statistics-MACAROONS-JS {
       width: 13.8%;
     }
@@ -453,9 +503,11 @@ header {
     #statistics-Barbershop-HTML {
       width: 27.5%;
     }
+
     #statistics-Barbershop-CSS {
       width: 63.2%;
     }
+
     #statistics-Barbershop-JS {
       width: 9.3%;
     }
@@ -463,9 +515,11 @@ header {
     #statistics-Sushi-HTML {
       width: 48.8%;
     }
+
     #statistics-Sushi-CSS {
       width: 50.4%;
     }
+
     #statistics-Sushi-JS {
       width: 0.8%;
     }
@@ -473,9 +527,11 @@ header {
     #statistics-HomeWorks-HTML {
       width: 26%;
     }
+
     #statistics-HomeWorks-CSS {
       width: 36.9%;
     }
+
     #statistics-HomeWorks-JS {
       width: 37.1%;
     }
@@ -624,10 +680,6 @@ header {
       .pet {
         flex: 0 0 calc(50% - 5px);
       }
-
-      .statistics {
-        border: 2px solid $bgColor;
-      }
     }
 
     @media (max-width: 480px) {
@@ -744,6 +796,7 @@ footer {
     }
 
   }
+
   @media (min-width: 500px) {
     background: linear-gradient(to right, white 50%, $bgColor7 50%, $bgColor7);
   }

@@ -7,19 +7,25 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png"/>
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png"/>
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png"/>
+    <link rel="preload" href="/images/myphoto.png" as="image">
 </head>
 <body>
 <header>
     <div class="container">
         <div id="img-container">
             <a href="#about">
-            <img class="_anim-items" alt="Екатерина Ухова" title="Екатерина Ухова" src="/images/myphoto.png"
-                 width="250"/>
+                <img class="_anim-items" alt="Екатерина Ухова" title="Екатерина Ухова" src="/images/myphoto.png"
+                     width="250"/>
             </a>
         </div>
         <div id="h1-container">
             <h1>Frontend-разработчик</h1>
-            <p id="subheading">junior</p>
+            <div class="wrapper-gradient">
+                <div class="gradient">
+                    <p id="subheading" class="gradient-text">junior</p>
+                </div>
+                <div class="gradient2"></div>
+            </div>
         </div>
     </div>
 </header>
@@ -28,14 +34,21 @@
         <div class="leftDiv"></div>
         <div class="rightDiv">
             <p class="_anim-items _anim-no-hide">Здравствуйте! Меня зовут Екатерина Ухова. Я - начинающий
-                frontend-разработчик. Здесь Вы можете увидеть <a href="#stack" >мой стек</a> и <a href="#pet">примеры моих работ.</a></p>
+                frontend-разработчик. Здесь Вы можете увидеть <a href="#stack">мой стек</a> и <a href="#pet">примеры
+                    моих работ.</a></p>
         </div>
     </div>
 </section>
 <section id="stack">
     <div class="container">
         <div class="leftDiv">
-            <h2>Мой стек</h2>
+            <div class="wrapper">
+                <div class="wrapper-gradient">
+                    <div class="gradient">
+                        <h2 class="gradient-text">Мой стек</h2>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="rightDiv _anim-items _anim-no-hide">
             <div class="stack-item">HTML5</div>
@@ -62,7 +75,9 @@
 </section>
 <section id="pet">
     <div class="container">
-        <h2>Пет-проекты</h2>
+        <h2 class="sign">
+            <span class="fast-flicker">П</span>ет-прое<span class="flicker">к</span>ты
+        </h2>
         <div class="pet-container">
             <div class="pet _anim-items _anim-no-hide">
                 <a href="https://esukhova.github.io/MACAROONS/" target="_blank">
