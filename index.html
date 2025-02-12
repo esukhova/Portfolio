@@ -7,14 +7,17 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png"/>
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png"/>
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png"/>
-    <link rel="preload" href="/images/myphoto.png" as="image">
+    <link rel="preload" href="/images/myphoto.webp" as="image">
+    <link rel="preload" href="/images/background-about.webp" as="image">
+    <link rel="preload" href="/images/background-spa.webp" as="image">
+    <link rel="preload" href="/images/background-landing.webp" as="image">
 </head>
 <body>
 <header>
     <div class="container">
         <div id="img-container">
             <a href="#about">
-                <img class="_anim-items" alt="Екатерина Ухова" title="Екатерина Ухова" src="/images/myphoto.png"
+                <img class="_anim-items" alt="Екатерина Ухова" title="Екатерина Ухова" src="/images/myphoto.webp"
                      width="250"/>
             </a>
         </div>
@@ -34,7 +37,7 @@
         <div class="leftDiv"></div>
         <div class="rightDiv">
             <p class="_anim-items _anim-no-hide">Здравствуйте! Меня зовут Екатерина Ухова. Я - начинающий
-                frontend-разработчик. Здесь Вы можете увидеть <a href="#stack">мой стек</a> и <a href="#pet">примеры
+                frontend-разработчик. Здесь Вы можете увидеть <a href="#stack">мой стек</a> и <a href="#spa">примеры
                     моих работ.</a></p>
         </div>
     </div>
@@ -51,11 +54,11 @@
             </div>
         </div>
         <div class="rightDiv _anim-items _anim-no-hide">
-            <div class="stack-item">HTML5</div>
-            <div class="stack-item">CSS3</div>
+            <div class="stack-item">HTML</div>
+            <div class="stack-item">CSS</div>
             <div class="stack-item">JavaScript</div>
             <div class="stack-item">TypeScript</div>
-            <div class="stack-item">JS</div>
+            <div class="stack-item">Pug</div>
             <div class="stack-item">jQuery</div>
             <div class="stack-item">Кроссбраузерная верстка</div>
             <div class="stack-item">Адаптивная верстка</div>
@@ -70,16 +73,69 @@
             <div class="stack-item">Bootstrap</div>
             <div class="stack-item">Tailwind</div>
             <div class="stack-item">SPA</div>
+            <div class="stack-item">Angular</div>
         </div>
     </div>
 </section>
-<section id="pet">
+<section class="spa" id="spa">
     <div class="container">
         <h2 class="sign">
-            <span class="fast-flicker">П</span>ет-прое<span class="flicker">к</span>ты
+            <span class="fast-flicker">S</span>PA
         </h2>
-        <div class="pet-container">
-            <div class="pet _anim-items _anim-no-hide">
+        <div class="spa__items">
+            <div class="spa__item spa__item_angular _anim-items _anim-no-hide">
+                <div class="spa__item-image">
+                    <a class="spa__item-link" href="https://esukhova.github.io/tea-app-Angular/" target="_blank">
+                        <img src="./images/tea.svg" alt="Tea App" title="Tea App"/>
+                    </a>
+                    <div class="spa__item-description"><span>Tea App</span></div>
+                </div>
+            </div>
+            <div class="spa__item spa__item_default _anim-items _anim-no-hide">
+                <div class="spa__item-image default">
+                    <div class="default">
+                        <img src="./images/default.svg" alt="гирлянда" title=""/>
+                    </div>
+                </div>
+            </div>
+            <div class="spa__item spa__item_default _anim-items _anim-no-hide">
+                <div class="spa__item-image default">
+                    <div class="default">
+                        <img src="./images/default2.svg" alt="гирлянда" title=""/>
+                    </div>
+                </div>
+            </div>
+            <div class="spa__item spa__item_default _anim-items _anim-no-hide">
+                <div class="spa__item-image default">
+                    <div class="default">
+                        <img src="./images/default3.svg" alt="гирлянда" title=""/>
+                    </div>
+                </div>
+            </div>
+            <div class="spa__item spa__item_default _anim-items _anim-no-hide">
+                <div class="spa__item-image default">
+                    <div class="default">
+                        <img src="./images/default.svg" alt="гирлянда" title=""/>
+                    </div>
+                </div>
+            </div>
+            <div class="spa__item spa__item_default _anim-items _anim-no-hide">
+                <div class="spa__item-image default">
+                    <div class="default">
+                        <img src="./images/default4.svg" alt="гирлянда" title=""/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="landing" id="landing">
+    <div class="container">
+        <h2 class="sign">
+            <span class="fast-flicker">Л</span>енди<span class="flicker">н</span>ги
+        </h2>
+        <div class="landing-container">
+            <div class="landing__item _anim-items _anim-no-hide">
                 <a href="https://esukhova.github.io/MACAROONS/" target="_blank">
                     <img src="./images/macaroons.svg" alt="Macaroons" title="Macaroons"/>
                 </a>
@@ -90,7 +146,7 @@
                     <div class="statistics-JS" id="statistics-MACAROONS-JS"></div>
                 </div>
             </div>
-            <div class="pet _anim-items _anim-no-hide">
+            <div class="landing__item _anim-items _anim-no-hide">
                 <a href="https://esukhova.github.io/Barbershop/" target="_blank">
                     <img src="./images/Barbershop.svg" alt="Barbershop" title="Barbershop"/>
                 </a>
@@ -101,18 +157,18 @@
                     <div class="statistics-JS" id="statistics-Barbershop-JS"></div>
                 </div>
             </div>
-            <div class="pet _anim-items _anim-no-hide">
-                <a href="https://esukhova.github.io/SuperSushi/" target="_blank">
-                    <img src="./images/sushi.svg" alt="Super Sushi" title="Super Sushi"/>
+            <div class="landing__item _anim-items _anim-no-hide">
+                <a href="https://esukhova.github.io/neuro_nets/" target="_blank">
+                    <img src="./images/neuro.svg" alt="Нейросети" title="Нейросети"/>
                 </a>
-                <div class="description">Super Sushi</div>
+                <div class="description">Нейросеть</div>
                 <div class="statistics _anim-items _anim-no-hide">
-                    <div class="statistics-HTML" id="statistics-Sushi-HTML"></div>
-                    <div class="statistics-CSS" id="statistics-Sushi-CSS"></div>
-                    <div class="statistics-JS" id="statistics-Sushi-JS"></div>
+                    <div class="statistics-HTML" id="statistics-Neuro-HTML"></div>
+                    <div class="statistics-CSS" id="statistics-Neuro-CSS"></div>
+                    <div class="statistics-JS" id="statistics-Neuro-JS"></div>
                 </div>
             </div>
-            <div class="pet _anim-items _anim-no-hide">
+            <div class="landing__item _anim-items _anim-no-hide">
                 <a href="https://esukhova.github.io/HomeWorks/" target="_blank">
                     <img src="./images/homeworks.svg" alt="HomeWorks" title="HomeWorks"/>
                 </a>
@@ -123,7 +179,7 @@
                     <div class="statistics-JS" id="statistics-HomeWorks-JS"></div>
                 </div>
             </div>
-            <div class="pet _anim-items _anim-no-hide">
+            <div class="landing__item _anim-items _anim-no-hide">
                 <a href="https://esukhova.github.io/LOFI/" target="_blank">
                     <img src="./images/LOFI.svg" alt="LOFI" title="LOFI"/>
                 </a>
@@ -134,7 +190,7 @@
                     <div class="statistics-JS" id="statistics-LOFI-JS"></div>
                 </div>
             </div>
-            <div class="pet _anim-items _anim-no-hide">
+            <div class="landing__item _anim-items _anim-no-hide">
                 <a href="https://esukhova.github.io/NFT/" target="_blank">
                     <img src="./images/NFT.svg" alt="NFT" title="NFT"/>
                 </a>
@@ -145,7 +201,7 @@
                     <div class="statistics-JS" id="statistics-NFT-JS"></div>
                 </div>
             </div>
-            <div class="pet _anim-items _anim-no-hide">
+            <div class="landing__item _anim-items _anim-no-hide">
                 <a href="https://esukhova.github.io/hangman-game/" target="_blank">
                     <img src="./images/Hangman.svg" alt="Игра Hangman" title="Игра Hangman"/>
                 </a>
@@ -156,7 +212,7 @@
                     <div class="statistics-JS" id="statistics-Hangman-JS"></div>
                 </div>
             </div>
-            <div class="pet _anim-items _anim-no-hide">
+            <div class="landing__item _anim-items _anim-no-hide">
                 <a href="https://esukhova.github.io/calculator/" target="_blank">
                     <img src="./images/Calculator.svg" alt="Калькулятор" title="Калькулятор"/>
                 </a>
@@ -167,7 +223,18 @@
                     <div class="statistics-JS" id="statistics-calculator-JS"></div>
                 </div>
             </div>
-            <div class="pet _anim-items _anim-no-hide">
+            <div class="landing__item _anim-items _anim-no-hide">
+                <a href="https://esukhova.github.io/SuperSushi/" target="_blank">
+                    <img src="./images/sushi.svg" alt="Super Sushi" title="Super Sushi"/>
+                </a>
+                <div class="description">Super Sushi</div>
+                <div class="statistics _anim-items _anim-no-hide">
+                    <div class="statistics-HTML" id="statistics-Sushi-HTML"></div>
+                    <div class="statistics-CSS" id="statistics-Sushi-CSS"></div>
+                    <div class="statistics-JS" id="statistics-Sushi-JS"></div>
+                </div>
+            </div>
+            <div class="landing__item _anim-items _anim-no-hide">
                 <a href="https://esukhova.github.io/Global/" target="_blank">
                     <img src="./images/Global.svg" alt="Global" title="Global"/>
                 </a>
@@ -178,7 +245,7 @@
                     <div class="statistics-JS" id="statistics-Global-JS"></div>
                 </div>
             </div>
-            <div class="pet _anim-items _anim-no-hide">
+            <div class="landing__item _anim-items _anim-no-hide">
                 <a href="https://esukhova.github.io/Relvise/" target="_blank">
                     <img src="./images/Relvise.svg" alt="Relvise" title="Relvise"/>
                 </a>
@@ -189,7 +256,7 @@
                     <div class="statistics-JS" id="statistics-Relvise-JS"></div>
                 </div>
             </div>
-            <div class="pet _anim-items _anim-no-hide">
+            <div class="landing__item _anim-items _anim-no-hide">
                 <a href="https://esukhova.github.io/GoCorona/" target="_blank">
                     <img src="./images/GoCorona.svg" alt="GoCorona" title="GoCorona"/>
                 </a>

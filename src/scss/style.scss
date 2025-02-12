@@ -68,11 +68,15 @@ a {
 .container {
   padding: 0 15px;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   max-width: 100%;
+  width: 100%;
   @media (min-width: 1024px) {
     max-width: 900px;
   }
-  @media (min-width: 1920px) {
+  @media (min-width: 1400px) {
     max-width: 1320px;
   }
 }
@@ -84,11 +88,7 @@ header {
   background-color: $bgColor;
 
   .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+    @include container(100vh, column);
   }
 
   #img-container,
@@ -111,6 +111,7 @@ header {
   img {
     width: 30vh;
     transition: all 0.1s ease 0s;
+
     &:hover {
       filter: drop-shadow(0 0 0.8rem #fae2b6);
     }
@@ -213,12 +214,12 @@ header {
             $bgColor7 15%, $bgColor7 25%,
             $bgColor2 25%, $bgColor2 33%,
             $bgColor7 33%, $bgColor7 calc(33% + 10px),
-            rgba(10, 10, 10, 0.8) calc(33% + 10px), rgba(10, 10, 10, 0.8) 90%, $bgColor6 90%, $bgColor6 calc(90% + 30px), $bgColor4 calc(90% + 30px)), url('/images/background-about.jpg');
+            rgba(10, 10, 10, 0.8) calc(33% + 10px), rgba(10, 10, 10, 0.8) 90%, $bgColor6 90%, $bgColor6 calc(90% + 30px), $bgColor4 calc(90% + 30px)), url('/images/background-about.webp');
     background-size: cover;
   }
 
   .container {
-    @include section(auto, row, row);
+    @include container(auto, row);
     @include divs($bgColor2, transparent);
     @include font-size1;
 
@@ -295,7 +296,7 @@ header {
   border-bottom: 10px solid $bgColor4;
 
   .container {
-    @include section(auto, row, row);
+    @include container(auto, row);
     @include divs(transparent, $bgColor2);
     @include font-size1;
 
@@ -307,12 +308,12 @@ header {
     .wrapper {
       position: relative;
 
-      &:before {
+      &::before {
         position: absolute;
         content: '';
-        top: -33%;
+        top: -27%;
         right: 50%;
-        width: 70%;
+        width: 60%;
         aspect-ratio: 1;
         border-radius: 50%;
         background: $bgColor3;
@@ -333,25 +334,25 @@ header {
       align-content: center;
       padding: 10px;
 
-      &._active .stack-item {
-        @for $var from 1 to 20 {
-          $delay: $var * 0.1;
-          $translate: $var * 10;
-          &:nth-child(#{$var}) {
-            @if $var==1 {
-              transition: all 1.5s ease 0s;
-            } @else {
-              transition: all 1.5s ease #{$delay + s};
-            }
-            margin: 3px;
-          }
-        }
-      }
+      //&._active .stack-item {
+      //  @for $var from 1 to 21 {
+      //    //$delay: $var * 0.1;
+      //    $translate: $var * 10;
+      //    &:nth-child(#{$var}) {
+      //      @if $var==1 {
+      //        transition: all 1.5s ease 0s;
+      //      } @else {
+      //        transition: all 1.5s ease #{$delay + s};
+      //      }
+      //      margin: 3px;
+      //    }
+      //  }
+      //}
     }
 
     .stack-item {
       color: $bgColor;
-      margin: 0;
+      margin: 3px;
       padding: 1vh;
       background: $bgColor5;
       border-radius: 1vh;
@@ -373,23 +374,183 @@ header {
   }
 }
 
-/*---PET-------------------------------------------------------------------------------------*/
+/*---SPA-------------------------------------------------------------------------------------*/
 
-#pet {
-  background: linear-gradient(rgba(10, 10, 10, 0.7) 0, rgba(10, 10, 10, 0.7) 0), url('/images/background-pet.jpg');
-  border-bottom: 10px solid $bgColor6;
+.spa {
+  background-image: linear-gradient(rgba(10, 10, 10, 0) 0, rgba(10, 10, 10, 0) 0), url('/images/background-spa.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 74%;
+  border-bottom: 10px solid black;
   padding-bottom: 1vh;
+  height: 400px;
+  @media (max-width: 1400px) {
+    height: 350px;
+  }
+  @media (max-width: 992px) {
+    height: auto;
+    background-size: auto 350%;
+    background-position: center;
+  }
 
   .container {
-    @include section(auto, column, column);
+    @include container(auto, column);
+    @include font-size1;
+  }
+
+  h2 {
+    color: $bgColor6;
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  &__item {
+    font-weight: 700;
+    flex: 0 0 16.66%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.8s ease;
+    opacity: 0;
+    text-align: center;
+    margin-bottom: 20px;
+    //transform: translate(0, 100%);
+    @media (max-width: 992px) {
+      flex: 0 0 33.3%;
+      &:nth-child(n+4):nth-child(-n+6)  {
+        display: none;
+      }
+    }
+    @media (max-width: 768px) {
+      flex: 0 0 50%;
+      &:nth-child(3) {
+        display: none;
+      }
+    }
+    @media (max-width: 480px) {
+      flex: 0 0 100%;
+      &:nth-child(2) {
+        display: none;
+      }
+    }
+
+    &._active {
+      opacity: 1;
+      //transform: translate(0, 0);
+    }
+
+    &-image {
+      position: relative;
+      flex: 0 0 70%;
+      &:hover:not(.default) {
+        transform: scale(1.05);
+      }
+      @media (max-width: 1400px) {
+        //flex: 0 0 33.3%;
+        flex: 0 0 80%;
+      }
+      @media (max-width: 992px) {
+        //flex: 0 0 33.3%;
+        flex: 0 0 45%;
+      }
+      @media (max-width: 480px) {
+        //flex: 0 0 100%;
+      }
+    }
+
+    &-link {
+      display: block;
+
+      img {
+        width: 100%;
+        border: 3px solid rgba(#ffae00, 0.3);
+        border-radius: 50%;
+        transition: all 0.1s;
+        background: rgba($bgColor6, 0.4);
+
+        &:hover {
+          border-color: #ffe6ff;
+          box-shadow: 0 0 0.3rem #ffe6ff, 0 0 1rem #ffae00;
+          background: $bgColor3;
+        }
+
+        &:active {
+          border-color: $bgColor6;
+        }
+      }
+    }
+
+    & .default {
+      img {
+        width: 100%;
+        //border: 3px solid rgba(#ffffff, 0.3);
+        //border-radius: 50%;
+      }
+    }
+
+    &-description {
+      position: absolute;
+      bottom: 20%;
+      text-align: center;
+      color: black;
+      pointer-events: none;
+      left: 50%;
+      transform: translate(-50%, 0);
+      text-wrap: nowrap;
+    }
+
+    &_angular {
+      .spa__item-image {
+        &::after {
+          display: block;
+          z-index: 100;
+          position: absolute;
+          content: url('/images/angular-after.svg');
+          top: 0;
+          right: -25%;
+          transition: all 0.3s ease;
+          transform: scale(1);
+          @media (max-width: 1400px) {
+            top: -7%;
+          }
+          @media (max-width: 480px) {
+            top: 0;
+          }
+        }
+
+        &:hover {
+          &::after {
+            right: -27%;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*---LANDING-------------------------------------------------------------------------------------*/
+
+.landing {
+  background: linear-gradient(rgba(10, 10, 10, 0.7) 0, rgba(10, 10, 10, 0.7) 0), url('/images/background-landing.jpg');
+  border-bottom: 10px solid $bgColor6;
+  padding-bottom: 1vh;
+  border-top: 30px solid $bgColor;
+
+  .container {
+    @include container(auto, column);
     @include font-size1;
 
     h2 {
       color: $bgColor6;
-      font-size: 5vh;
     }
 
-    .pet-container {
+    .landing-container {
       display: flex;
       flex-wrap: wrap;
       width: 100%;
@@ -397,7 +558,7 @@ header {
       gap: 20px;
     }
 
-    .pet {
+    .landing__item {
       font-weight: 700;
       background: rgba(53, 51, 51, 0.8);
       margin: 0;
@@ -417,7 +578,7 @@ header {
       //transform: translate(0, 100%);
     }
 
-    .pet._active {
+    .landing__item._active {
       opacity: 1;
       transform: translate(0, 0);
     }
@@ -512,16 +673,16 @@ header {
       width: 9.3%;
     }
 
-    #statistics-Sushi-HTML {
-      width: 48.8%;
+    #statistics-Neuro-HTML {
+      width: 25.5%;
     }
 
-    #statistics-Sushi-CSS {
-      width: 50.4%;
+    #statistics-Neuro-CSS {
+      width: 60.5%;
     }
 
-    #statistics-Sushi-JS {
-      width: 0.8%;
+    #statistics-Neuro-JS {
+      width: 14%;
     }
 
     #statistics-HomeWorks-HTML {
@@ -582,6 +743,18 @@ header {
 
     #statistics-calculator-JS {
       width: 56.6%;
+    }
+
+    #statistics-Sushi-HTML {
+      width: 48.8%;
+    }
+
+    #statistics-Sushi-CSS {
+      width: 50.4%;
+    }
+
+    #statistics-Sushi-JS {
+      width: 0.8%;
     }
 
     #statistics-Global-HTML {
@@ -666,24 +839,18 @@ header {
     }
 
     @media (max-width: 992px) {
-      .pet {
-        flex: 0 0 calc(33.3% - 7px);
+      .landing__item {
+        flex: 0 0 calc(33.3% - 13.5px);
       }
     }
     @media (max-width: 768px) {
-      .pet {
-        flex: 0 0 calc(50% - 5px);
-      }
-    }
-
-    @media (max-width: 768px) {
-      .pet {
-        flex: 0 0 calc(50% - 5px);
+      .landing__item {
+        flex: 0 0 calc(50% - 10px);
       }
     }
 
     @media (max-width: 480px) {
-      .pet {
+      .landing__item {
         flex: 0 0 100%;
       }
     }
@@ -699,7 +866,7 @@ footer {
   background: $bgColor7;
 
   .container {
-    @include section(auto, row, row);
+    @include container(auto, row);
     @include divs($bgColor2, $bgColor7);
     @include font-size1;
     color: $bgColor;

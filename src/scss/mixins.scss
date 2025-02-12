@@ -1,9 +1,4 @@
-@mixin section($height, $flex-direction, $flex-direction-600) {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  margin: 0 auto;
+@mixin container($height, $flex-direction) {
   height: $height;
   flex-direction: $flex-direction;
 }
@@ -33,12 +28,18 @@
 
 @mixin font-size1 {
   font-size: 2.5vh;
+  div span {
+    font-size: 18px;
+  }
   h2 {
-    font-size: 3vh;
+    font-size: 5.5vh;
   }
 
   @media (max-height: 320px) {
     font-size: 3.5vh;
+    div span {
+      font-size: 16px;
+    }
     h2 {
       font-size: 5vh;
     }
@@ -60,6 +61,9 @@
 
   @media (min-width: 1024px) {
     font-size: 2.5vh;
+    div span {
+      font-size: 16px;
+    }
     h2 {
       font-size: 3vh;
     }
@@ -67,8 +71,11 @@
 
   @media (min-width: 1200px) {
     font-size: 18px;
+    div span {
+      font-size: 18px;
+    }
     h2 {
-      font-size: 32px;
+      font-size: 5vh;
     }
   }
 
