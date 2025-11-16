@@ -1,3 +1,6 @@
+@use 'sass:map';
+@use 'sass:math';
+
 @mixin container($height, $flex-direction) {
   height: $height;
   flex-direction: $flex-direction;
@@ -31,41 +34,26 @@
   div span {
     font-size: 18px;
   }
-  h2 {
-    font-size: 5.5vh;
-  }
 
   @media (max-height: 320px) {
     font-size: 3.5vh;
     div span {
       font-size: 16px;
     }
-    h2 {
-      font-size: 5vh;
-    }
   }
 
   @media (min-width: 600px) {
     font-size: 3.5vh;
-    h2 {
-      font-size: 5vh;
-    }
   }
 
   @media (min-width: 900px) {
     font-size: 3.5vh;
-    h2 {
-      font-size: 5vh;
-    }
   }
 
   @media (min-width: 1024px) {
     font-size: 2.5vh;
     div span {
       font-size: 16px;
-    }
-    h2 {
-      font-size: 3vh;
     }
   }
 
@@ -74,22 +62,51 @@
     div span {
       font-size: 18px;
     }
-    h2 {
-      font-size: 5vh;
-    }
   }
 
   @media (max-width: 1200px) and (min-height: 1000px) {
     font-size: 1.8vh;
-    h2 {
-      font-size: 3vh;
-    }
   }
 
   @media (min-height: 1600px) {
     font-size: 1vh;
-    h2 {
-      font-size: 1.5vh;
-    }
   }
 }
+
+@function clamp-f($min, $max, $min-width: 360, $max-width: 1480, $root-font-size: 16) {
+  $slope: math.div(($max - $min), ($max-width - $min-width));
+
+  // Вычисляем пересечение с осью Y
+  $y-axis-intersection-px: $min - $slope * $min-width;
+  $y-axis-intersection-rem: math.div($y-axis-intersection-px, $root-font-size);
+
+  $val: '#{$y-axis-intersection-rem}rem + #{$slope * 100}vw';
+
+  $min-rem: #{math.div($min, $root-font-size)}rem;
+  $max-rem: #{math.div($max, $root-font-size)}rem;
+
+  @return clamp(#{$min-rem}, #{$val}, #{$max-rem});
+}
+
+@function clamp-value($base-value, $base-screen-width: 1480, $min-screen-width: 1200, $root-font-size: 16) {
+  $scale-factor: math.div($base-value, $base-screen-width);
+
+  $min-px: $scale-factor * $min-screen-width;
+  $min-rem: math.div($min-px, $root-font-size);
+  $val-vw: $scale-factor * 100;
+  $max-rem: math.div($base-value, $root-font-size);
+
+  @return clamp(#{$min-rem}rem, #{$val-vw}vw, #{$max-rem}rem);
+}
+
+@function clamp-value-m($base-value, $base-screen-width: 360, $max-screen-width: 500, $min-screen-width: 360, $root-font-size: 16) {
+  $min-px: math.div($base-value * $min-screen-width, $base-screen-width);
+  $val-vw: math.div($base-value * 100, $base-screen-width);
+  $max-px: math.div($base-value * $max-screen-width, $base-screen-width);
+
+  $min-rem: math.div($min-px, $root-font-size);
+  $max-rem: math.div($max-px, $root-font-size);
+
+  @return clamp(#{$min-rem}rem, #{$val-vw}vw, #{$max-rem}rem);
+}
+
