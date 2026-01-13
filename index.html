@@ -1,318 +1,424 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang='ru'>
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset='UTF-8'/>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
     <title>Екатерина Ухова</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png"/>
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png"/>
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png"/>
-    <link rel="preload" href="/images/myphoto.webp" as="image">
-    <link rel="preload" href="/images/background-about.webp" as="image">
-    <link rel="preload" href="/images/background-spa.webp" as="image">
-    <link rel="preload" href="/images/background-landing.webp" as="image">
+    <link rel='apple-touch-icon' sizes='180x180' href='/favicon/apple-touch-icon.png'/>
+    <link rel='icon' type='image/png' sizes='32x32' href='/favicon/favicon-32x32.png'/>
+    <link rel='icon' type='image/png' sizes='16x16' href='/favicon/favicon-16x16.png'/>
+    <link rel='preload' href='/images/myphoto.webp' as='image'>
+    <link rel='preload' href='/images/background-about.webp' as='image'>
+    <link rel='preload' href='/images/background-spa.webp' as='image'>
+    <link rel='preload' href='/images/background-landing.webp' as='image'>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css'/>
+
 </head>
 <body>
-<header>
-    <div class="container">
-        <div id="img-container">
-            <a href="#about">
-                <img class="_anim-items" alt="Екатерина Ухова" title="Екатерина Ухова" src="/images/myphoto.webp"
-                     width="250"/>
-            </a>
-        </div>
-        <div id="h1-container">
-            <h1>Frontend-разработчик</h1>
-            <div class="wrapper-gradient">
-                <div class="gradient">
-                    <p id="subheading" class="gradient-text">junior</p>
+<header class='header'>
+    <div class='header__container container'>
+        <div class='header__wrapper'>
+            <div class='header__wrapper-inner'>
+                <div class='header__image img-wrapper'>
+                    <a href='#about'>
+                        <img class='_anim-items' alt='Екатерина Ухова' title='Екатерина Ухова'
+                             src='/images/myphoto.webp'
+                             width='250'/>
+                    </a>
                 </div>
-                <div class="gradient2"></div>
+                <div class='header__content'>
+                    <h1 class='header__title title title--type_h1'>Frontend-разработчик</h1>
+                    <div class='wrapper-gradient'>
+                        <div class='gradient'>
+                            <p class='header__subtitle gradient-text'>Екатерина Ухова</p>
+                        </div>
+                        <div class='gradient2'></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </header>
-<section id="about">
-    <div class="container">
-        <div class="leftDiv"></div>
-        <div class="rightDiv">
-            <p class="_anim-items _anim-no-hide">Здравствуйте! Меня зовут Екатерина Ухова. Я - начинающий
-                frontend-разработчик. Здесь Вы можете увидеть <a href="#stack">мой стек</a> и <a href="#spa">примеры
-                    моих работ.</a></p>
+<section id='about' class='about'>
+    <div class='container'>
+        <div class='leftDiv'></div>
+        <div class='rightDiv'>
+            <p class='about__text _anim-items _anim-no-hide'>
+                <span>
+                    Здравствуйте! Меня зовут Екатерина Ухова.
+                </span>
+                <span>
+                    Я &#8212; frontend-разработчик. Здесь Вы можете увидеть <a href='#stack'>мой стек</a> и <a
+                    href='#spa'>примеры моих работ</a>
+                </span>
+            </p>
         </div>
     </div>
 </section>
-<section id="stack">
-    <div class="container">
-        <div class="leftDiv">
-            <div class="wrapper">
-                <div class="wrapper-gradient">
-                    <div class="gradient">
-                        <h2 class="gradient-text">Мой стек</h2>
+<section id='stack' class='stack'>
+    <div class='stack__container container'>
+        <div class='leftDiv'>
+            <div class='wrapper'>
+                <div class='wrapper-gradient'>
+                    <div class='gradient'>
+                        <h2 class='stack__title title title--type_h3 gradient-text'>Мой стек</h2>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="rightDiv _anim-items _anim-no-hide">
-            <div class="stack-item">HTML</div>
-            <div class="stack-item">CSS</div>
-            <div class="stack-item">JavaScript</div>
-            <div class="stack-item">TypeScript</div>
-            <div class="stack-item">Pug</div>
-            <div class="stack-item">jQuery</div>
-            <div class="stack-item">Кроссбраузерная верстка</div>
-            <div class="stack-item">Адаптивная верстка</div>
-            <div class="stack-item">ООП</div>
-            <div class="stack-item">Git</div>
-            <div class="stack-item">Sass</div>
-            <div class="stack-item">Less</div>
-            <div class="stack-item">Vite JS</div>
-            <div class="stack-item">Gulp</div>
-            <div class="stack-item">Grunt</div>
-            <div class="stack-item">Webpack</div>
-            <div class="stack-item">Bootstrap</div>
-            <div class="stack-item">Tailwind</div>
-            <div class="stack-item">SPA</div>
-            <div class="stack-item">Angular</div>
-            <div class="stack-item">Vue</div>
+        <div class='rightDiv _anim-items _anim-no-hide'>
+            <div class='stack-item'>HTML</div>
+            <div class='stack-item'>CSS</div>
+            <div class='stack-item'>JavaScript</div>
+            <div class='stack-item'>TypeScript</div>
+            <div class='stack-item'>Pug</div>
+            <div class='stack-item'>jQuery</div>
+            <div class='stack-item'>Кроссбраузерная верстка</div>
+            <div class='stack-item'>Адаптивная верстка</div>
+            <div class='stack-item'>ООП</div>
+            <div class='stack-item'>Git</div>
+            <div class='stack-item'>Sass</div>
+            <div class='stack-item'>Less</div>
+            <div class='stack-item'>Vite JS</div>
+            <div class='stack-item'>Gulp</div>
+            <div class='stack-item'>Grunt</div>
+            <div class='stack-item'>Webpack</div>
+            <div class='stack-item'>Bootstrap</div>
+            <div class='stack-item'>Tailwind</div>
+            <div class='stack-item'>SPA</div>
+            <div class='stack-item'>Angular</div>
+            <div class='stack-item'>Vue</div>
         </div>
     </div>
 </section>
-<section class="spa" id="spa">
-    <div class="container">
-        <h2 class="sign">
-            <span class="fast-flicker">S</span>PA
+<section class='spa' id='spa'>
+    <div class='spa__container container'>
+        <h2 class='spa__title title title--type_h2 sign'>
+            <span class='fast-flicker'>S</span>PA
         </h2>
-        <div class="spa__items">
-            <div class="spa__item spa__item_angular _anim-items _anim-no-hide">
-                <div class="spa__item-image">
-                    <a class="spa__item-link spa__item-link--teaapp" href="https://esukhova.github.io/tea-app-Angular/" target="_blank">
-                        <img src="./images/tea.svg" alt="Tea App" title="Tea App"/>
-                    </a>
-                    <div class="spa__item-description"><span>Tea App</span></div>
-                </div>
-            </div>
-            <div class="spa__item spa__item_angular _anim-items _anim-no-hide">
-                <div class="spa__item-image default">
-                    <a class="spa__item-link spa__item-link--itstorm" href="https://esukhova.github.io/ITStorm/" target="_blank">
-                        <img src="./images/itstorm.svg" alt="АйтиШторм" title="ITStorm"/>
-                    </a>
-                    <div class="spa__item-description"><span>АйтиШторм</span></div>
-                </div>
-            </div>
-            <div class="spa__item spa__item_default _anim-items _anim-no-hide">
-                <div class="spa__item-image default">
-                    <div class="default">
-                        <img src="./images/default2.svg" alt="гирлянда" title=""/>
+        <div class='spa__swiper-outer swiper-outer'>
+            <div class='spa__swiper swiper'>
+                <div class='spa__items swiper-wrapper swiper-wrapper'>
+                    <div class='swiper__slide swiper-slide spa__item spa__item_angular _anim-items _anim-no-hide'>
+                        <div class='spa__item-image'>
+                            <a class='spa__item-link spa__item-link--teaapp'
+                               href='https://esukhova.github.io/tea-app-Angular/'
+                               target='_blank'>
+                                <img src='./images/tea.svg' alt='Tea App' title='Tea App'/>
+                            </a>
+                            <div class='spa__item-description'><span>Tea App</span></div>
+                        </div>
+                    </div>
+                    <div class='swiper__slide swiper-slide spa__item spa__item_angular _anim-items _anim-no-hide'>
+                        <div class='spa__item-image default'>
+                            <a class='spa__item-link spa__item-link--itstorm' href='https://esukhova.github.io/ITStorm/'
+                               target='_blank'>
+                                <img src='./images/itstorm.svg' alt='АйтиШторм' title='ITStorm'/>
+                            </a>
+                            <div class='spa__item-description'><span>АйтиШторм</span></div>
+                        </div>
+                    </div>
+<!--                    <div class='swiper__slide swiper-slide spa__item spa__item_angular _anim-items _anim-no-hide'>-->
+<!--                        <div class='spa__item-image default'>-->
+<!--                            <a class='spa__item-link spa__item-link&#45;&#45;home-decor' href='https://esukhova.github.io/HOME-DECOR/'-->
+<!--                               target='_blank'>-->
+<!--                                <img src='./images/angular-home-decor.svg' alt='HOME DECOR' title='HOME DECOR'/>-->
+<!--                            </a>-->
+<!--                            <div class='spa__item-description'><span>HOME DECOR</span></div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+                    <div class='swiper__slide swiper-slide spa__item spa__item_default _anim-items _anim-no-hide'>
+                        <div class='spa__item-image default'>
+                            <div class='default'>
+                                <img src='./images/default2.svg' alt='гирлянда' title=''/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='swiper__slide swiper-slide spa__item spa__item_default _anim-items _anim-no-hide'>
+                        <div class='spa__item-image default'>
+                            <div class='default'>
+                                <img src='./images/default3.svg' alt='гирлянда' title=''/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='swiper__slide swiper-slide spa__item spa__item_vue _anim-items _anim-no-hide'>
+                        <div class='spa__item-image default'>
+                            <a class='spa__item-link spa__item-link--sneakers' href='https://esukhova.github.io/vue-sneakers/'
+                               target='_blank'>
+                                <img src='./images/vue-sneakers.svg' alt='Sneakers' title='Sneakers'/>
+                            </a>
+                            <div class='spa__item-description'><span>Sneakers</span></div>
+                        </div>
+                    </div>
+                    <div class='swiper__slide swiper-slide spa__item spa__item_default _anim-items _anim-no-hide'>
+                        <div class='spa__item-image default'>
+                            <div class='default'>
+                                <img src='./images/default4.svg' alt='гирлянда' title=''/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='swiper__slide swiper-slide spa__item spa__item_default _anim-items _anim-no-hide'>
+                        <div class='spa__item-image default'>
+                            <div class='default'>
+                                <img src='./images/default2.svg' alt='гирлянда' title=''/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='swiper__slide swiper-slide spa__item spa__item_default _anim-items _anim-no-hide'>
+                        <div class='spa__item-image default'>
+                            <div class='default'>
+                                <img src='./images/default2.svg' alt='гирлянда' title=''/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='swiper__slide swiper-slide spa__item spa__item_default _anim-items _anim-no-hide'>
+                        <div class='spa__item-image default'>
+                            <div class='default'>
+                                <img src='./images/default2.svg' alt='гирлянда' title=''/>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="spa__item spa__item_default _anim-items _anim-no-hide">
-                <div class="spa__item-image default">
-                    <div class="default">
-                        <img src="./images/default3.svg" alt="гирлянда" title=""/>
-                    </div>
-                </div>
+            <div class='spa__swiper-button-prev swiper__button-prev button-prev'>
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'>
+                    <g data-name='05-Play'>
+                        <path style='fill:#6bdcff' d='m17 63 38-31L17 1v62z'/>
+                        <path d='M24 34.868V6.711L17 1v62l38-31-19.331 9.977A8 8 0 0 1 24 34.868z'
+                              style='fill:#48befd'/>
+                        <path style='fill:#1c69a1' d='M13 5v54l4 4V1l-4 4z'/>
+                        <path d='M14.2 42.9a3 3 0 0 1-1.2-2.4V59l4 4V41.5a1.75 1.75 0 0 1-2.8 1.4z'
+                              style='fill:#15507a'/>
+                        <path style='fill:none;stroke:#000;stroke-linejoin:round;stroke-width:2px'
+                              d='M17 11V9M23.129 58 17 63V13M17 7V1l38 31-30 24.474M17 1l-4 4v54l4 4'/>
+                    </g>
+                </svg>
             </div>
-            <div class="spa__item spa__item_default _anim-items _anim-no-hide">
-                <div class="spa__item-image default">
-                    <div class="default">
-                        <img src="./images/default.svg" alt="гирлянда" title=""/>
-                    </div>
-                </div>
+            <div class='spa__swiper-button-next swiper__button-next button-next'>
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'>
+                    <g data-name='05-Play'>
+                        <path style='fill:#6bdcff' d='m17 63 38-31L17 1v62z'/>
+                        <path d='M24 34.868V6.711L17 1v62l38-31-19.331 9.977A8 8 0 0 1 24 34.868z'
+                              style='fill:#48befd'/>
+                        <path style='fill:#1c69a1' d='M13 5v54l4 4V1l-4 4z'/>
+                        <path d='M14.2 42.9a3 3 0 0 1-1.2-2.4V59l4 4V41.5a1.75 1.75 0 0 1-2.8 1.4z'
+                              style='fill:#15507a'/>
+                        <path style='fill:none;stroke:#000;stroke-linejoin:round;stroke-width:2px'
+                              d='M17 11V9M23.129 58 17 63V13M17 7V1l38 31-30 24.474M17 1l-4 4v54l4 4'/>
+                    </g>
+                </svg>
             </div>
-            <div class="spa__item spa__item_default _anim-items _anim-no-hide">
-                <div class="spa__item-image default">
-                    <div class="default">
-                        <img src="./images/default4.svg" alt="гирлянда" title=""/>
-                    </div>
-                </div>
-            </div>
+            <div class='spa__swiper-pagination swiper__pagination pagination'></div>
         </div>
     </div>
 </section>
-<section class="landing" id="landing">
-    <div class="container">
-        <h2 class="sign">
-            <span class="fast-flicker">Л</span>енди<span class="flicker">н</span>ги
+<section class='landing' id='landing'>
+    <div class='landing__container container'>
+        <h2 class='landing__title title title--type_h2 sign'>
+            <span class='fast-flicker'>Л</span>енди<span class='flicker'>н</span>ги
         </h2>
-        <div class="landing-container">
-            <div class="landing__item _anim-items _anim-no-hide">
-                <a href="https://esukhova.github.io/MACAROONS/" target="_blank">
-                    <img src="./images/macaroons.svg" alt="Macaroons" title="Macaroons"/>
+        <div class='landing__items'>
+            <div class='landing__item _anim-items _anim-no-hide'>
+                <a class='landing__item-link' href='https://cellulitebw.tutorplace.ru/' target='_blank'>
+                    <img src='./images/anti-cellulite.svg' alt='Антицеллюлит' title='Антицеллюлит'/>
+                    <div class='landing__item-description'>Антицеллюлит</div>
+                    <div class='statistics _anim-items _anim-no-hide'>
+                        <div class='statistics-PUG' id='statistics-anti-cellulite-PUG'></div>
+                        <div class='statistics-CSS' id='statistics-anti-cellulite-CSS'></div>
+                        <div class='statistics-JS' id='statistics-anti-cellulite-JS'></div>
+                    </div>
                 </a>
-                <div class="description">MACAROONS</div>
-                <div class="statistics _anim-items _anim-no-hide">
-                    <div class="statistics-HTML" id="statistics-MACAROONS-HTML"></div>
-                    <div class="statistics-CSS" id="statistics-MACAROONS-CSS"></div>
-                    <div class="statistics-JS" id="statistics-MACAROONS-JS"></div>
+            </div>
+            <div class='landing__item _anim-items _anim-no-hide'>
+                <a class='landing__item-link' href='https://neutextws.tutorplace.ru/' target='_blank'>
+                    <img src='./images/neural-networks.svg' alt='Нейросети' title='Нейросети'/>
+                    <div class='landing__item-description'>Нейросети</div>
+                    <div class='statistics _anim-items _anim-no-hide'>
+                        <div class='statistics-PUG' id='statistics-neural-networks-PUG'></div>
+                        <div class='statistics-CSS' id='statistics-neural-networks-CSS'></div>
+                        <div class='statistics-JS' id='statistics-neural-networks-JS'></div>
+                    </div>
+                </a>
+            </div>
+            <div class='landing__item _anim-items _anim-no-hide'>
+                <a class='landing__item-link' href='https://workoutbw3.tutorplace.ru/' target='_blank'>
+                    <img src='./images/mens-training.svg' alt='Мужские тренировки' title='Мужские тренировки'/>
+                    <div class='landing__item-description'>Мужские тренировки</div>
+                    <div class='statistics _anim-items _anim-no-hide'>
+                        <div class='statistics-PUG' id='statistics-mens-training-PUG'></div>
+                        <div class='statistics-CSS' id='statistics-mens-training-CSS'></div>
+                        <div class='statistics-JS' id='statistics-mens-training-JS'></div>
+                    </div>
+                </a>
+            </div>
+            <div class='landing__item _anim-items _anim-no-hide'>
+                <a class='landing__item-link' href='https://chatbotsbws.tutorplace.ru/' target='_blank'>
+                    <img src='./images/chatbots.svg' alt='Чат-боты' title='Чат-боты'/>
+                    <div class='landing__item-description'>Чат-боты</div>
+                    <div class='statistics _anim-items _anim-no-hide'>
+                        <div class='statistics-PUG' id='statistics-chatbots-PUG'></div>
+                        <div class='statistics-CSS' id='statistics-chatbots-CSS'></div>
+                        <div class='statistics-JS' id='statistics-chatbots-JS'></div>
+                    </div>
+                </a>
+            </div>
+            <div class='landing__item _anim-items _anim-no-hide'>
+                <a class='landing__item-link' href='https://esukhova.github.io/MACAROONS/' target='_blank'>
+                    <img src='./images/macaroons.svg' alt='Macaroons' title='Macaroons'/>
+                    <div class='landing__item-description'>MACAROONS</div>
+                    <div class='statistics _anim-items _anim-no-hide'>
+                        <div class='statistics-HTML' id='statistics-macaroons-HTML'></div>
+                        <div class='statistics-CSS' id='statistics-macaroons-CSS'></div>
+                        <div class='statistics-JS' id='statistics-macaroons-JS'></div>
+                    </div>
+                </a>
+            </div>
+            <div class='landing__item _anim-items _anim-no-hide'>
+                <a class='landing__item-link' href='https://esukhova.github.io/Barbershop/' target='_blank'>
+                    <img src='./images/Barbershop.svg' alt='Barbershop' title='Barbershop'/>
+                    <div class='landing__item-description'>Strong Club Barbershop</div>
+                    <div class='statistics _anim-items _anim-no-hide'>
+                        <div class='statistics-HTML' id='statistics-barbershop-HTML'></div>
+                        <div class='statistics-CSS' id='statistics-barbershop-CSS'></div>
+                        <div class='statistics-JS' id='statistics-barbershop-JS'></div>
+                    </div>
+                </a>
+            </div>
+            <div class='landing__item _anim-items _anim-no-hide'>
+                <a class='landing__item-link' href='https://esukhova.github.io/neuro_nets/' target='_blank'>
+                    <img src='./images/neuro.svg' alt='Нейросети' title='Нейросети'/>
+                </a>
+                <div class='landing__item-description'>Нейросеть</div>
+                <div class='statistics _anim-items _anim-no-hide'>
+                    <div class='statistics-HTML' id='statistics-neuro-HTML'></div>
+                    <div class='statistics-CSS' id='statistics-neuro-CSS'></div>
+                    <div class='statistics-JS' id='statistics-neuro-JS'></div>
                 </div>
             </div>
-            <div class="landing__item _anim-items _anim-no-hide">
-                <a href="https://esukhova.github.io/Barbershop/" target="_blank">
-                    <img src="./images/Barbershop.svg" alt="Barbershop" title="Barbershop"/>
+            <div class='landing__item _anim-items _anim-no-hide'>
+                <a class='landing__item-link' href='https://esukhova.github.io/HomeWorks/' target='_blank'>
+                    <img src='./images/homeworks.svg' alt='HomeWorks' title='HomeWorks'/>
+                    <div class='landing__item-description'>HomeWorks</div>
+                    <div class='statistics _anim-items _anim-no-hide'>
+                        <div class='statistics-HTML' id='statistics-neuro-HTML'></div>
+                        <div class='statistics-CSS' id='statistics-neuro-CSS'></div>
+                        <div class='statistics-JS' id='statistics-neuro-JS'></div>
+                    </div>
                 </a>
-                <div class="description">Strong Club Barbershop</div>
-                <div class="statistics _anim-items _anim-no-hide">
-                    <div class="statistics-HTML" id="statistics-Barbershop-HTML"></div>
-                    <div class="statistics-CSS" id="statistics-Barbershop-CSS"></div>
-                    <div class="statistics-JS" id="statistics-Barbershop-JS"></div>
-                </div>
             </div>
-            <div class="landing__item _anim-items _anim-no-hide">
-                <a href="https://esukhova.github.io/neuro_nets/" target="_blank">
-                    <img src="./images/neuro.svg" alt="Нейросети" title="Нейросети"/>
+            <div class='landing__item _anim-items _anim-no-hide'>
+                <a class='landing__item-link' href='https://esukhova.github.io/LOFI/' target='_blank'>
+                    <img src='./images/LOFI.svg' alt='LOFI' title='LOFI'/>
+                    <div class='landing__item-description'>LO-FI</div>
+                    <div class='statistics _anim-items _anim-no-hide'>
+                        <div class='statistics-HTML' id='statistics-lofi-HTML'></div>
+                        <div class='statistics-CSS' id='statistics-lofi-CSS'></div>
+                        <div class='statistics-JS' id='statistics-lofi-JS'></div>
+                    </div>
                 </a>
-                <div class="description">Нейросеть</div>
-                <div class="statistics _anim-items _anim-no-hide">
-                    <div class="statistics-HTML" id="statistics-Neuro-HTML"></div>
-                    <div class="statistics-CSS" id="statistics-Neuro-CSS"></div>
-                    <div class="statistics-JS" id="statistics-Neuro-JS"></div>
-                </div>
             </div>
-            <div class="landing__item _anim-items _anim-no-hide">
-                <a href="https://esukhova.github.io/HomeWorks/" target="_blank">
-                    <img src="./images/homeworks.svg" alt="HomeWorks" title="HomeWorks"/>
+            <div class='landing__item _anim-items _anim-no-hide'>
+                <a class='landing__item-link' href='https://esukhova.github.io/NFT/' target='_blank'>
+                    <img src='./images/NFT.svg' alt='NFT' title='NFT'/>
+                    <div class='landing__item-description'>NFT</div>
+                    <div class='statistics _anim-items _anim-no-hide'>
+                        <div class='statistics-HTML' id='statistics-nft-HTML'></div>
+                        <div class='statistics-CSS' id='statistics-nft-CSS'></div>
+                        <div class='statistics-JS' id='statistics-nft-JS'></div>
+                    </div>
                 </a>
-                <div class="description">HomeWorks</div>
-                <div class="statistics _anim-items _anim-no-hide">
-                    <div class="statistics-HTML" id="statistics-HomeWorks-HTML"></div>
-                    <div class="statistics-CSS" id="statistics-HomeWorks-CSS"></div>
-                    <div class="statistics-JS" id="statistics-HomeWorks-JS"></div>
-                </div>
             </div>
-            <div class="landing__item _anim-items _anim-no-hide">
-                <a href="https://esukhova.github.io/LOFI/" target="_blank">
-                    <img src="./images/LOFI.svg" alt="LOFI" title="LOFI"/>
+            <div class='landing__item _anim-items _anim-no-hide'>
+                <a class='landing__item-link' href='https://esukhova.github.io/hangman-game/' target='_blank'>
+                    <img src='./images/Hangman.svg' alt='Игра Hangman' title='Игра Hangman'/>
+                    <div class='landing__item-description'>Игра 'Hangman'</div>
+                    <div class='statistics _anim-items _anim-no-hide'>
+                        <div class='statistics-HTML' id='statistics-hangman-HTML'></div>
+                        <div class='statistics-CSS' id='statistics-hangman-CSS'></div>
+                        <div class='statistics-JS' id='statistics-hangman-JS'></div>
+                    </div>
                 </a>
-                <div class="description">LO-FI</div>
-                <div class="statistics _anim-items _anim-no-hide">
-                    <div class="statistics-HTML" id="statistics-LOFI-HTML"></div>
-                    <div class="statistics-CSS" id="statistics-LOFI-CSS"></div>
-                    <div class="statistics-JS" id="statistics-LOFI-JS"></div>
-                </div>
             </div>
-            <div class="landing__item _anim-items _anim-no-hide">
-                <a href="https://esukhova.github.io/NFT/" target="_blank">
-                    <img src="./images/NFT.svg" alt="NFT" title="NFT"/>
+            <div class='landing__item _anim-items _anim-no-hide'>
+                <a class='landing__item-link' href='https://esukhova.github.io/calculator/' target='_blank'>
+                    <img src='./images/Calculator.svg' alt='Калькулятор' title='Калькулятор'/>
+                    <div class='landing__item-description'>Калькулятор</div>
+                    <div class='statistics _anim-items _anim-no-hide'>
+                        <div class='statistics-HTML' id='statistics-calculator-HTML'></div>
+                        <div class='statistics-CSS' id='statistics-calculator-CSS'></div>
+                        <div class='statistics-JS' id='statistics-calculator-JS'></div>
+                    </div>
                 </a>
-                <div class="description">NFT</div>
-                <div class="statistics _anim-items _anim-no-hide">
-                    <div class="statistics-HTML" id="statistics-NFT-HTML"></div>
-                    <div class="statistics-CSS" id="statistics-NFT-CSS"></div>
-                    <div class="statistics-JS" id="statistics-NFT-JS"></div>
-                </div>
             </div>
-            <div class="landing__item _anim-items _anim-no-hide">
-                <a href="https://esukhova.github.io/hangman-game/" target="_blank">
-                    <img src="./images/Hangman.svg" alt="Игра Hangman" title="Игра Hangman"/>
+            <div class='landing__item _anim-items _anim-no-hide'>
+                <a class='landing__item-link' href='https://esukhova.github.io/Global/' target='_blank'>
+                    <img src='./images/Global.svg' alt='Global' title='Global'/>
+                    <div class='landing__item-description'>Визитка для Global</div>
+                    <div class='statistics _anim-items _anim-no-hide'>
+                        <div class='statistics-HTML' id='statistics-global-HTML'></div>
+                        <div class='statistics-CSS' id='statistics-global-CSS'></div>
+                        <div class='statistics-JS' id='statistics-global-JS'></div>
+                    </div>
                 </a>
-                <div class="description">Игра "Hangman"</div>
-                <div class="statistics _anim-items _anim-no-hide">
-                    <div class="statistics-HTML" id="statistics-Hangman-HTML"></div>
-                    <div class="statistics-CSS" id="statistics-Hangman-CSS"></div>
-                    <div class="statistics-JS" id="statistics-Hangman-JS"></div>
-                </div>
             </div>
-            <div class="landing__item _anim-items _anim-no-hide">
-                <a href="https://esukhova.github.io/calculator/" target="_blank">
-                    <img src="./images/Calculator.svg" alt="Калькулятор" title="Калькулятор"/>
+            <div class='landing__item _anim-items _anim-no-hide'>
+                <a class='landing__item-link' href='https://esukhova.github.io/GoCorona/' target='_blank'>
+                    <img src='./images/GoCorona.svg' alt='GoCorona' title='GoCorona'/>
+                    <div class='landing__item-description'>Визитка для GoCorona</div>
+                    <div class='statistics _anim-items _anim-no-hide'>
+                        <div class='statistics-HTML' id='statistics-gocorona-HTML'></div>
+                        <div class='statistics-CSS' id='statistics-gocorona-CSS'></div>
+                        <div class='statistics-JS' id='statistics-gocorona-JS'></div>
+                    </div>
                 </a>
-                <div class="description">Калькулятор</div>
-                <div class="statistics _anim-items _anim-no-hide">
-                    <div class="statistics-HTML" id="statistics-calculator-HTML"></div>
-                    <div class="statistics-CSS" id="statistics-calculator-CSS"></div>
-                    <div class="statistics-JS" id="statistics-calculator-JS"></div>
-                </div>
-            </div>
-            <div class="landing__item _anim-items _anim-no-hide">
-                <a href="https://esukhova.github.io/SuperSushi/" target="_blank">
-                    <img src="./images/sushi.svg" alt="Super Sushi" title="Super Sushi"/>
-                </a>
-                <div class="description">Super Sushi</div>
-                <div class="statistics _anim-items _anim-no-hide">
-                    <div class="statistics-HTML" id="statistics-Sushi-HTML"></div>
-                    <div class="statistics-CSS" id="statistics-Sushi-CSS"></div>
-                    <div class="statistics-JS" id="statistics-Sushi-JS"></div>
-                </div>
-            </div>
-            <div class="landing__item _anim-items _anim-no-hide">
-                <a href="https://esukhova.github.io/Global/" target="_blank">
-                    <img src="./images/Global.svg" alt="Global" title="Global"/>
-                </a>
-                <div class="description">Визитка для Global</div>
-                <div class="statistics _anim-items _anim-no-hide">
-                    <div class="statistics-HTML" id="statistics-Global-HTML"></div>
-                    <div class="statistics-CSS" id="statistics-Global-CSS"></div>
-                    <div class="statistics-JS" id="statistics-Global-JS"></div>
-                </div>
-            </div>
-            <div class="landing__item _anim-items _anim-no-hide">
-                <a href="https://esukhova.github.io/Relvise/" target="_blank">
-                    <img src="./images/Relvise.svg" alt="Relvise" title="Relvise"/>
-                </a>
-                <div class="description">Визитка для Relvise</div>
-                <div class="statistics _anim-items _anim-no-hide">
-                    <div class="statistics-HTML" id="statistics-Relvise-HTML"></div>
-                    <div class="statistics-CSS" id="statistics-Relvise-CSS"></div>
-                    <div class="statistics-JS" id="statistics-Relvise-JS"></div>
-                </div>
-            </div>
-            <div class="landing__item _anim-items _anim-no-hide">
-                <a href="https://esukhova.github.io/GoCorona/" target="_blank">
-                    <img src="./images/GoCorona.svg" alt="GoCorona" title="GoCorona"/>
-                </a>
-                <div class="description">Визитка для GoCorona</div>
-                <div class="statistics _anim-items _anim-no-hide">
-                    <div class="statistics-HTML" id="statistics-GoCorona-HTML"></div>
-                    <div class="statistics-CSS" id="statistics-GoCorona-CSS"></div>
-                    <div class="statistics-JS" id="statistics-GoCorona-JS"></div>
-                </div>
             </div>
         </div>
-        <div class="list">
+        <div class='list'>
             <ul>
-                <li id="red">HTML</li>
-                <li id="green">CSS (SCSS)</li>
-                <li id="yellow">JS</li>
+                <li id='statistics-red'>HTML</li>
+                <li id='statistics-blue'>PUG</li>
+                <li id='statistics-green'>CSS (SCSS)</li>
+                <li id='statistics-yellow'>JS</li>
             </ul>
         </div>
     </div>
 </section>
-<footer>
-    <div class="container">
-        <div class="leftDiv">
-            <div class="address-item-container _anim-items _anim-no-hide">
-                <div class="address-item">
-                    <a href="https://github.com/esukhova" target="_blank">
-                        <img src="./images/github.svg" alt="github" title="github"/>
+<footer class='footer'>
+    <div class='footer__container container'>
+        <div class='leftDiv'>
+            <div class='address-item-container _anim-items _anim-no-hide'>
+                <div class='address-item address-item--gh'>
+                    <a href='https://github.com/esukhova' target='_blank'>
+                        <img src='./images/github.svg' alt='github' title='github'/>
                     </a>
                 </div>
-                <div class="address-item">
-                    <a href="mailto:e_ukhova@inbox.ru?subject=Отклик%20на%20резюме&body=Здравствуйте!%20Нам%20очень%20понравилось%20ваше%20портфолио!"
-                       target="_blank">
-                        <img src="./images/mail.svg" alt="электронная почта" title="email"/>
+                <div class='address-item address-item--mail'>
+                    <a href='mailto:e_ukhova@inbox.ru?subject=Отклик%20на%20резюме&body=Здравствуйте!%20Нам%20очень%20понравилось%20ваше%20портфолио!'
+                       target='_blank'>
+                        <img src='./images/mail.svg' alt='электронная почта' title='email'/>
                     </a>
                 </div>
-                <div class="address-item">
-                    <a href="https://vk.com/hi_and_goodbye" target="_blank">
-                        <img src="./images/vk.svg" alt="вконтакте" title="vk"/>
+                <div class='address-item address-item--vk'>
+                    <a href='https://vk.com/hi_and_goodbye' target='_blank'>
+                        <img src='./images/vk.svg' alt='вконтакте' title='vk'/>
                     </a>
                 </div>
-                <div class="address-item">
-                    <a href="https://t.me/kate_ukhova" target="_blank">
-                        <img src="./images/tg.svg" alt="телеграмм" title="тг"/>
+                <div class='address-item address-item--tg'>
+                    <a href='https://t.me/kate_ukhova' target='_blank'>
+                        <img src='./images/tg.svg' alt='телеграмм' title='тг'/>
                     </a>
                 </div>
             </div>
         </div>
-        <div class="rightDiv">
-            <p>Для связи со мной пишите <br>
-                на почту <a href="mailto:e_ukhova@inbox.ru" target="_blank">e_ukhova@inbox.ru</a><br>
-                и в &nbsp;<a href="https://t.me/kate_ukhova" target="_blank">телеграмм</a></p>
+        <div class='rightDiv'>
+            <p class='footer__text'>Для связи со мной пишите
+                <span>на почту <a href='mailto:e_ukhova@inbox.ru' target='_blank'>e_ukhova@inbox.ru</a></span>
+                <span>и в &nbsp;<a href='https://t.me/kate_ukhova' target='_blank'>телеграмм</a></span>
+            </p>
         </div>
     </div>
 </footer>
-<script type="module" src="/src/js/main.js"></script>
+<script src='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js'></script>
+<script type='module' src='/src/js/main.js'></script>
 </body>
 </html>

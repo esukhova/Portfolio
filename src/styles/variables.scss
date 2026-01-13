@@ -1,0 +1,120 @@
+@use 'sass:map';
+@use 'sass:math';
+
+$font-family: (
+    'title-h1': ('NTSomic', sans-serif),
+    'title': ('NTSomic', sans-serif),
+    'text': ('NTSomic', sans-serif),
+);
+
+$font-size: (
+    'desktop': (
+        'h1': 64,
+        'h2': 48,
+        'h3': 30,
+        'body': 20,
+        'big': 24,
+    ),
+    'small-desktop': (
+        'h1': 48,
+        'h2': 48,
+        'h3': 34,
+        'body': 20,
+        'big': 24,
+    ),
+    'tablet': (
+        'h1': 64,
+        'h2': 48,
+        'h3': 34,
+        'body': 20,
+        'big': 24,
+    ),
+    'mobile': (
+        'h1': 32,
+        'h2': 30,
+        'h3': 24,
+        'body': 16,
+        'big': 18,
+    ),
+    '350px': (
+        'h1': 28,
+        'h2': 26,
+        'h3': 20,
+        'body': 16,
+        'big': 18,
+    )
+);
+
+$font-weight: (
+    'desktop': (
+        'h1': 900,
+        'h2': 800,
+        'h3': 700,
+        'body': 400,
+        'big': 600,
+    ),
+    'mobile': (
+        'h1': 900,
+        'h2': 800,
+        'h3': 700,
+        'body': 400,
+        'big': 600,
+    ),
+);
+
+$line-height: (
+    'desktop': (
+        'h1': 110%,
+        'h2': 110%,
+        'h3': 110%,
+        'body': 120%,
+    ),
+    'mobile': (
+        'h1': 110%,
+        'h2': 110%,
+        'h3': 110%,
+        'body': 120%,
+    ),
+);
+
+$letter-spacing: (
+    'desktop': (
+        'h1': -0.01em,
+        'h2': 0.03em,
+        'h3': 0.03em,
+        'body': initial,
+        'big': 0.03em,
+    ),
+    'mobile': (
+        'h1': -0.01em,
+        'h2': 0.03em,
+        'h3': 0.03em,
+        'body': initial,
+        'big': 0.03em,
+    ),
+);
+
+$bgColor: #312c2c;
+$bgColor2: #ffffff;
+$bgColor3: #d5b7b7;
+$bgColor4: #d9dbce;
+$bgColor5: #ee6161;
+$bgColor6: orange;
+$bgColor7: #cfdd91;
+$bgColor8: #e6e5e5;
+$bgColor9: #5ad8ff;
+$bgColor10: #7171fa;
+$color: #cccccc;
+$color2: #be9c9c;
+$color3: #d32828;
+$color4: #ffa400;
+
+$width: (
+    'desktop': 1199px,
+    'tablet': 991px,
+    'mobile': 767px,
+    'small-mobile': 575px,
+);
+
+$width--container: 1480px;
+$root-font-size: 16px;
