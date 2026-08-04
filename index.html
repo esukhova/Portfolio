@@ -7,7 +7,7 @@
     <link rel='apple-touch-icon' sizes='180x180' href='/favicon/apple-touch-icon.png'/>
     <link rel='icon' type='image/png' sizes='32x32' href='/favicon/favicon-32x32.png'/>
     <link rel='icon' type='image/png' sizes='16x16' href='/favicon/favicon-16x16.png'/>
-    <link rel='preload' href='/images/myphoto.webp' as='image'>
+    <link rel='preload' href='/images/intro-bg.png' as='image'>
     <link rel='preload' href='/images/background-about.webp' as='image'>
     <link rel='preload' href='/images/background-spa.webp' as='image'>
     <link rel='preload' href='/images/background-landing.webp' as='image'>
@@ -15,30 +15,12 @@
 
 </head>
 <body>
-<header class='header'>
-    <div class='header__container container'>
-        <div class='header__wrapper'>
-            <div class='header__wrapper-inner'>
-                <div class='header__image img-wrapper'>
-                    <a href='#about'>
-                        <img class='_anim-items' alt='Екатерина Ухова' title='Екатерина Ухова'
-                             src='/images/myphoto.webp'
-                             width='250'/>
-                    </a>
-                </div>
-                <div class='header__content'>
-                    <h1 class='header__title title title--type_h1'>Frontend-разработчик</h1>
-                    <div class='wrapper-gradient'>
-                        <div class='gradient'>
-                            <p class='header__subtitle gradient-text'>Екатерина Ухова</p>
-                        </div>
-                        <div class='gradient2'></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<div class='intro'>
+    <div class="bg-image">
+        <img src='./images/intro-bg.png' alt='Tea App' title='Tea App'/>
     </div>
-</header>
+
+</div>
 <section id='about' class='about'>
     <div class='container'>
         <div class='leftDiv'></div>
@@ -118,15 +100,15 @@
                             <div class='spa__item-description'><span>АйтиШторм</span></div>
                         </div>
                     </div>
-<!--                    <div class='swiper__slide swiper-slide spa__item spa__item_angular _anim-items _anim-no-hide'>-->
-<!--                        <div class='spa__item-image default'>-->
-<!--                            <a class='spa__item-link spa__item-link&#45;&#45;home-decor' href='https://esukhova.github.io/HOME-DECOR/'-->
-<!--                               target='_blank'>-->
-<!--                                <img src='./images/angular-home-decor.svg' alt='HOME DECOR' title='HOME DECOR'/>-->
-<!--                            </a>-->
-<!--                            <div class='spa__item-description'><span>HOME DECOR</span></div>-->
-<!--                        </div>-->
-<!--                    </div>-->
+                    <!--                    <div class='swiper__slide swiper-slide spa__item spa__item_angular _anim-items _anim-no-hide'>-->
+                    <!--                        <div class='spa__item-image default'>-->
+                    <!--                            <a class='spa__item-link spa__item-link&#45;&#45;home-decor' href='https://esukhova.github.io/HOME-DECOR/'-->
+                    <!--                               target='_blank'>-->
+                    <!--                                <img src='./images/angular-home-decor.svg' alt='HOME DECOR' title='HOME DECOR'/>-->
+                    <!--                            </a>-->
+                    <!--                            <div class='spa__item-description'><span>HOME DECOR</span></div>-->
+                    <!--                        </div>-->
+                    <!--                    </div>-->
                     <div class='swiper__slide swiper-slide spa__item spa__item_default _anim-items _anim-no-hide'>
                         <div class='spa__item-image default'>
                             <div class='default'>
@@ -143,7 +125,8 @@
                     </div>
                     <div class='swiper__slide swiper-slide spa__item spa__item_vue _anim-items _anim-no-hide'>
                         <div class='spa__item-image default'>
-                            <a class='spa__item-link spa__item-link--sneakers' href='https://esukhova.github.io/vue-sneakers/'
+                            <a class='spa__item-link spa__item-link--sneakers'
+                               href='https://esukhova.github.io/vue-sneakers/'
                                target='_blank'>
                                 <img src='./images/vue-sneakers.svg' alt='Sneakers' title='Sneakers'/>
                             </a>

@@ -9,122 +9,11 @@
 
 /*---HEADER-----------------------------------------------------------------------------------*/
 
-.header {
-    background-color: $bgColor;
+.intro {
     overflow: hidden;
     position: relative;
-
-    &__bg.img-wrapper {
-        width: 110vw;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: -1;
-    }
-
-    &__container.container {
-        @include container(100vh, column);
-    }
-
-    &__wrapper {
-        position: relative;
-        z-index: 1;
-        border-radius: 400px;
-        padding: clamp-f(8, 30);
-        animation: animWidth 2s 0.4s both;
-        overflow: visible;
-
-        @include tablet {
-            animation: unset;
-        }
-
-        &:before {
-            position: absolute;
-            z-index: -2;
-            content: '';
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 100%;
-            height: 100%;
-            background-image: linear-gradient(50deg, $bgColor7 30%, $bgColor3 30%, $bgColor3 76%, #c082ea 76%, #c082ea 100%);
-            background-size: cover;
-            border-radius: 500px;
-            border: solid clamp-f(5, 15) $bgColor5;
-
-            @include tablet {
-                display: none;
-            }
-        }
-    }
-
-    &__wrapper-inner {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        border-radius: 400px;
-        padding: clamp-f(8, 50);
-        background-color: #ebecd8;
-        border: clamp-f(4, 12) solid $bgColor2;
-        box-shadow: 0 0 50px 3px $bgColor2;
-
-        @include tablet {
-            flex-direction: column;
-            align-items: center;
-            border-radius: 0;
-            background-color: transparent;
-            border: none;
-            padding: 0;
-            width: 70vw;
-            max-width: 300px;
-            box-shadow: none;
-        }
-    }
-
-    &__image {
-        width: 30vh;
-        flex: 0 0 30vh;
-        transition: all 0.1s ease 0s;
-
-        @include tablet {
-            width: 100%;
-        }
-
-        a {
-            display: block;
-            width: 100%;
-        }
-
-        &:hover {
-            filter: drop-shadow(0 0 0.8rem #fae2b6);
-        }
-    }
-
-    &__content {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        animation: appearance 0.4s 0.4s both;
-    }
-
-    &__title {
-        margin-bottom: 16px;
-
-        @include tablet {
-            color: $bgColor2;
-        }
-    }
-
-    &__subtitle {
-        font-size: clamp-value(32);
-        font-weight: 500;
-
-        @include mobile {
-            font-size: clamp-value-m(20);
-        }
-    }
+    height: 100dvh;
+    width: 100vw;
 }
 
 /*---ABOUT-----------------------------------------------------------------------------------*/
@@ -205,9 +94,9 @@
 
 .stack {
     background-image: linear-gradient(60deg, $bgColor4 10vw,
-        black 10vw, calc(10vw + 10px),
+        black 10vw, black calc(10vw + 10px),
         $bgColor calc(10vw + 10px), $bgColor calc(10vw + 20px),
-        $bgColor4 calc(10vw + 20px), $bgColor4 calc(10vw + 30px),
+        $bgColor2 calc(10vw + 20px), $bgColor2 calc(10vw + 30px),
         black calc(10vw + 30px), black calc(27vw + 40px),
         $bgColor2 calc(27vw + 40px));
     background-size: cover;
@@ -253,21 +142,6 @@
         flex-wrap: wrap;
         align-content: center;
         padding: 10px;
-
-        //&._active .stack-item {
-        //  @for $var from 1 to 21 {
-        //    //$delay: $var * 0.1;
-        //    $translate: $var * 10;
-        //    &:nth-child(#{$var}) {
-        //      @if $var==1 {
-        //        transition: all 1.5s ease 0s;
-        //      } @else {
-        //        transition: all 1.5s ease #{$delay + s};
-        //      }
-        //      margin: 3px;
-        //    }
-        //  }
-        //}
     }
 
     .stack-item {
@@ -430,8 +304,6 @@
         & .default {
             img {
                 width: 100%;
-                //border: 3px solid rgba(#ffffff, 0.3);
-                //border-radius: 50%;
             }
         }
 
@@ -443,7 +315,7 @@
             pointer-events: none;
             left: 50%;
             transform: translate(-50%, 0);
-            text-wrap: nowrap;
+            white-space: nowrap;
             font-size: clamp-value(16);
 
             @media (max-width: 1480px) {
@@ -451,7 +323,7 @@
             }
 
             @media (max-width: 767px) {
-                font-size: clamp-value-m(10);
+                font-size: clamp-value-m(16);
             }
         }
 
@@ -515,22 +387,11 @@
 /*---LANDING-------------------------------------------------------------------------------------*/
 
 .landing {
-    background-image: linear-gradient(rgba(10, 10, 10, 0.7) 0, rgba(10, 10, 10, 0.7) 0), url('/images/background-landing.jpg');
+    background-image: linear-gradient(rgba(10, 10, 10, 0.7) 0, rgba(10, 10, 10, 0.7) 0), url('/images/background-landing.webp');
     border-bottom: 10px solid $bgColor6;
     border-top: 30px solid $bgColor;
     padding: clamp-f(20, 50) 0;
     position: relative;
-
-    @keyframes flicker {
-        0%, 100% {
-            opacity: 0.9;
-            transform: scaleY(1);
-        }
-        50% {
-            opacity: 0.7;
-            transform: scaleY(0.95);
-        }
-    }
 
     &__container.container {
         @include container(auto, column);
@@ -931,9 +792,8 @@
         }
 
         &._active .address-item {
-            @for $var from 1 to 5 {
+            @for $var from 1 through 4 {
                 $delay: $var * 0.1;
-                $translate: $var * 10;
                 &:nth-child(#{$var}) {
                     @if $var==1 {
                         transition: margin 1.5s ease 0s;
