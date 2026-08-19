@@ -1,0 +1,15 @@
+import { createRoot } from 'react-dom/client';
+import { StrictMode } from 'react';
+import { App } from '@/App'
+import '@/styles/style.scss'
+
+const rootEl = document.getElementById('root');
+if (!rootEl) {
+    throw new Error('Не найден элемент #root');
+}
+
+createRoot(rootEl).render(
+    <StrictMode>
+        <App />
+    </StrictMode>,
+)
