@@ -133,10 +133,10 @@
         }
 
         .sidebar__controller {
-            background-image: url("//images/controller-boom.svg");
+            background-image: url("/images/controller-boom.svg");
 
             @include mobile {
-                background-image: url("//images/controller-boom-m.svg");
+                background-image: url("/images/controller-boom-m.svg");
             }
         }
     }
@@ -221,7 +221,7 @@
         margin-top: clamp-f(-3, -6);
         position: relative;
         top: clamp-f(-2.5, -5);
-        background-image: url("//images/controller.svg");
+        background-image: url("/images/controller.svg");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center top;
