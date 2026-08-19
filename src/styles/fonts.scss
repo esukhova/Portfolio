@@ -1,8 +1,18 @@
 @font-face {
+    font-family: DuskDemon;
+    font-weight: 400;
+    font-style: normal;
+    src: url("fonts/DuskDemon/DuskDemon.woff2") format("woff2"),
+    url("fonts/DuskDemon/DuskDemon.woff") format("woff");
+    font-display: swap;
+}
+
+@font-face {
     font-family: NTSomic;
     font-weight: 700;
     font-style: normal;
-    src: url("/fonts/NTSomic/NTSomic-Bold.otf") format("opentype");
+    src: url("fonts/NTSomic/NTSomicBold.woff2") format("woff2"),
+    url("fonts/NTSomic/NTSomicBold.woff") format("woff");
     font-display: swap;
 }
 
@@ -10,7 +20,8 @@
     font-family: NTSomic;
     font-weight: 500;
     font-style: normal;
-    src: url("/fonts/NTSomic/NTSomic-Medium.otf") format("opentype");
+    src: url("fonts/NTSomic/NTSomicMedium.woff2") format("woff2"),
+    url("fonts/NTSomic/NTSomicMedium.woff") format("woff");
     font-display: swap;
 }
 
@@ -18,6 +29,7 @@
     font-family: NTSomic;
     font-weight: 400;
     font-style: normal;
-    src: url("/fonts/NTSomic/NTSomic-Regular.otf") format("opentype");
+    src: url("fonts/NTSomic/NTSomicRegular.woff2") format("woff2"),
+    url("fonts/NTSomic/NTSomicRegular.woff") format("woff");
     font-display: swap;
 }

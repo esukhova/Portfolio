@@ -38,6 +38,14 @@
     }
 }
 
+@mixin hover {
+    @media (hover: hover) {
+        &:hover {
+            @content;
+        }
+    }
+}
+
 @mixin container($height, $flex-direction) {
     height: $height;
     flex-direction: $flex-direction;

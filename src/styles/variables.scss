@@ -2,7 +2,7 @@
 @use 'sass:math';
 
 $font-family: (
-    'title-h1': ('NTSomic', sans-serif),
+    'title-h1': ('DuskDemon', sans-serif),
     'title': ('NTSomic', sans-serif),
     'text': ('NTSomic', sans-serif),
 );
@@ -23,21 +23,21 @@ $font-size: (
         'big': 24,
     ),
     'tablet': (
-        'h1': 64,
+        'h1': 120,
         'h2': 48,
         'h3': 34,
         'body': 20,
         'big': 24,
     ),
     'mobile': (
-        'h1': 32,
+        'h1': 64,
         'h2': 30,
         'h3': 24,
         'body': 16,
         'big': 18,
     ),
     '350px': (
-        'h1': 28,
+        'h1': 60,
         'h2': 26,
         'h3': 20,
         'body': 16,
@@ -79,14 +79,14 @@ $line-height: (
 
 $letter-spacing: (
     'desktop': (
-        'h1': -0.01em,
+        'h1': 0.05em,
         'h2': 0.03em,
         'h3': 0.03em,
         'body': initial,
         'big': 0.03em,
     ),
     'mobile': (
-        'h1': -0.01em,
+        'h1': 0.05em,
         'h2': 0.03em,
         'h3': 0.03em,
         'body': initial,

@@ -1,0 +1,238 @@
+[
+    {
+        "id": "home-decor",
+        "title": "HOME DECOR",
+        "category": "framework",
+        "framework": "angular",
+        "url": "https://esukhova.github.io/HOME-DECOR/",
+        "repo": "esukhova/HOME-DECOR",
+        "image": "home-decor.svg",
+        "description": "HOME DECOR",
+        "stats": {
+            "HTML/PUG": 28.8,
+            "SCSS": 14.8,
+            "JS/TS": 56.4
+        }
+    },
+    {
+        "id": "tea-app",
+        "title": "Tea App",
+        "category": "framework",
+        "framework": "angular",
+        "url": "https://esukhova.github.io/tea-app-Angular/",
+        "repo": "esukhova/tea-app-Angular",
+        "image": "tea.svg",
+        "description": "Tea App",
+        "stats": {
+            "HTML/PUG": 34.3,
+            "SCSS": 9.5,
+            "JS/TS": 56.2
+        }
+    },
+    {
+        "id": "itstorm",
+        "title": "АйтиШторм",
+        "category": "framework",
+        "framework": "angular",
+        "url": "https://esukhova.github.io/ITStorm/",
+        "repo": "esukhova/ITStorm",
+        "image": "itstorm.svg",
+        "description": "АйтиШторм",
+        "stats": {
+            "HTML/PUG": 43.9,
+            "SCSS": 26.7,
+            "JS/TS": 29.4
+        }
+    },
+    {
+        "id": "sneakers",
+        "title": "SNEAKERS",
+        "category": "framework",
+        "framework": "vue",
+        "url": "https://esukhova.github.io/vue-sneakers/",
+        "repo": "esukhova/vue-sneakers",
+        "image": "vue-sneakers.svg",
+        "description": "SNEAKERS",
+        "stats": {
+            "HTML/PUG": 1.8,
+            "SCSS": 0.6,
+            "JS/TS": 97.6
+        }
+    },
+    {
+        "id": "anti-cellulite",
+        "title": "Анти-целлюлит",
+        "category": "framework",
+        "framework": "vue",
+        "url": "https://cellulitebw.tutorplace.ru/",
+        "image": "anti-cellulite.svg",
+        "description": "Анти-целлюлит"
+    },
+    {
+        "id": "neural-networks",
+        "title": "Нейросети",
+        "category": "framework",
+        "framework": "vue",
+        "url": "https://neutextws.tutorplace.ru/",
+        "image": "neural-networks.svg",
+        "description": "Нейросети"
+    },
+    {
+        "id": "mens-training",
+        "title": "Мужские тренировки",
+        "category": "framework",
+        "framework": "vue",
+        "url": "https://workoutbw3.tutorplace.ru/",
+        "image": "mens-training.svg",
+        "description": "Мужские тренировки"
+    },
+    {
+        "id": "chatbots",
+        "title": "Чат-боты",
+        "category": "framework",
+        "framework": "vue",
+        "url": "https://chatbotsbws.tutorplace.ru/",
+        "image": "chatbots.svg",
+        "description": "Чат-боты"
+    },
+    {
+        "id": "macaroons",
+        "title": "MACAROONS",
+        "category": "vanilla",
+        "url": "https://esukhova.github.io/MACAROONS/",
+        "repo": "esukhova/MACAROONS",
+        "image": "macaroons.svg",
+        "description": "MACAROONS",
+        "stats": {
+            "HTML/PUG": 27.4,
+            "SCSS": 58.8,
+            "JS/TS": 13.8
+        }
+    },
+    {
+        "id": "barbershop",
+        "title": "Strong Club Barbershop",
+        "category": "vanilla",
+        "url": "https://esukhova.github.io/Barbershop/",
+        "repo": "esukhova/Barbershop",
+        "image": "Barbershop.svg",
+        "description": "Strong Club Barbershop",
+        "stats": {
+            "HTML/PUG": 27.5,
+            "SCSS": 63.2,
+            "JS/TS": 9.3
+        }
+    },
+    {
+        "id": "lofi",
+        "title": "LO-FI",
+        "category": "vanilla",
+        "url": "https://esukhova.github.io/LOFI/",
+        "repo": "esukhova/LOFI",
+        "image": "LOFI.svg",
+        "description": "LO-FI",
+        "stats": {
+            "HTML/PUG": 51.6,
+            "SCSS": 39.6,
+            "JS/TS": 8.8
+        }
+    },
+    {
+        "id": "hangman",
+        "title": "Игра \"Hangman\"",
+        "category": "vanilla",
+        "url": "https://esukhova.github.io/hangman-game/",
+        "repo": "esukhova/hangman-game",
+        "image": "Hangman.svg",
+        "description": "Игра \"Hangman\"",
+        "stats": {
+            "HTML/PUG": 24,
+            "SCSS": 20.8,
+            "JS/TS": 55.2
+        }
+    },
+    {
+        "id": "nft",
+        "title": "NFT",
+        "category": "vanilla",
+        "url": "https://esukhova.github.io/NFT/",
+        "repo": "esukhova/NFT",
+        "image": "NFT.svg",
+        "description": "NFT",
+        "stats": {
+            "HTML/PUG": 20.8,
+            "SCSS": 64.1,
+            "JS/TS": 15.1
+        }
+    },
+    {
+        "id": "global",
+        "title": "Визитка для Global",
+        "category": "vanilla",
+        "url": "https://esukhova.github.io/Global/",
+        "repo": "esukhova/Global",
+        "image": "Global.svg",
+        "description": "Визитка для Global",
+        "stats": {
+            "HTML/PUG": 26.5,
+            "SCSS": 64.9,
+            "JS/TS": 8.6
+        }
+    },
+    {
+        "id": "gocorona",
+        "title": "Визитка для GoCorona",
+        "category": "vanilla",
+        "url": "https://esukhova.github.io/GoCorona/",
+        "repo": "esukhova/GoCorona",
+        "image": "GoCorona.svg",
+        "description": "Визитка для GoCorona",
+        "stats": {
+            "HTML/PUG": 37.7,
+            "SCSS": 57.2,
+            "JS/TS": 5.1
+        }
+    },
+    {
+        "id": "neuro",
+        "title": "Нейросеть",
+        "category": "vanilla",
+        "url": "https://esukhova.github.io/neuro_nets/",
+        "repo": "esukhova/neuro_nets",
+        "image": "neuro.svg",
+        "description": "Нейросеть",
+        "stats": {
+            "HTML/PUG": 30.8,
+            "SCSS": 52.2,
+            "JS/TS": 17
+        }
+    },
+    {
+        "id": "homeworks",
+        "title": "HomeWorks",
+        "category": "vanilla",
+        "url": "https://esukhova.github.io/HomeWorks/",
+        "repo": "esukhova/HomeWorks",
+        "image": "homeworks.svg",
+        "description": "HomeWorks",
+        "stats": {
+            "HTML/PUG": 21.9,
+            "SCSS": 26.4,
+            "JS/TS": 51.7
+        }
+    },
+    {
+        "id": "calculator",
+        "title": "Калькулятор",
+        "category": "vanilla",
+        "url": "https://esukhova.github.io/calculator/",
+        "repo": "esukhova/calculator",
+        "image": "Calculator.svg",
+        "description": "Калькулятор",
+        "stats": {
+            "HTML/PUG": 7.4,
+            "SCSS": 36,
+            "JS/TS": 56.6
+        }
+    }
+]

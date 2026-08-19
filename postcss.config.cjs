@@ -1,5 +1,6 @@
 module.exports = {
-  plugins: {
-    autoprefixer: {},
-  },
+  plugins: [
+    require('webp-in-css/plugin'),
+    require('autoprefixer'),
+  ],
 };

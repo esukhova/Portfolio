@@ -2,9 +2,36 @@
 @use 'variables'as *;
 @use 'mixins' as *;
 
+@keyframes fromBottom {
+    0% {
+        transform: translateX(-50%) translateY(120%);
+    }
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+@keyframes fromTop {
+    0% {
+        transform: translateY(-200%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes appearance {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 /*---GRADIENT-TEXT-----------------------------------------------------------------------------------*/
 
-.wrapper-gradient {
+.title-wrapper-gradient {
     position: relative;
     background-color: black;
     filter: contrast(3);
@@ -71,10 +98,9 @@
     }
 }
 
-
 /*---SIGNBOARD-----------------------------------------------------------------------------------*/
 
-.sign {
+.flicker-1 {
     color: $bgColor2;
     text-shadow: 0 0 0.3rem #ffe6ff, 0 0 1rem #ffae00,
     -0.2rem 0.1rem 1rem #ff9f10, 0.2rem 0.1rem 1rem #ff9f10,
@@ -104,11 +130,11 @@
     }
 }
 
-.flicker {
+.flicker-2 {
     animation: shine 2s forwards, blink 3s 2s infinite;
 }
 
-.fast-flicker {
+.flicker-3 {
     animation: shine 2s forwards, blink 10s 1s infinite;
 }
 
@@ -250,6 +276,137 @@
         opacity: 1;
     }
 }
+
+/*---INTRO ELEMENTS--------------------------------------------------------------------------------*/
+
+@keyframes fall {
+    0% {
+        transform: translateX(-50%) translateY(0);
+    }
+    100% {
+        transform: translateX(-50%) translateY(35%) rotate(30deg);
+    }
+}
+
+@keyframes textShadow {
+    0% {
+        text-shadow:
+            2px 2px 0px #1d0b5e,
+            3px 3px 0px #1d0b5e,
+            4px 4px 0px #1d0b5e,
+            6px 6px 0px #1d0b5e;
+    }
+    100% {
+        text-shadow:
+            2px 2px 0px #6c420b,
+            3px 3px 0px #dc8109,
+            4px 4px 0px #dc8109,
+            6px 6px 0px #dc8109;
+    }
+}
+
+/*---SIDEBAR-----------------------------------------------------------------------------------*/
+$sidebar-spring-duration: 2s;
+$sidebar-spring-delay: 3s;
+$sidebar-sway-start: $sidebar-spring-delay + $sidebar-spring-duration;
+$sidebar-sway-duration: 6s;
+$sidebar-sway-angle: 2.5deg;
+$sidebar-spring-timing: $sidebar-spring-duration $sidebar-spring-delay both;
+
+@keyframes sidebarDrop {
+    0% {
+        transform: translateY(-110%);
+    }
+    15% {
+        transform: translateY(5%);
+    }
+    35% {
+        transform: translateY(-2.5%);
+    }
+    52% {
+        transform: translateY(1.5%);
+    }
+    67% {
+        transform: translateY(-0.8%);
+    }
+    80% {
+        transform: translateY(0.5%);
+    }
+    90% {
+        transform: translateY(-0.2%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes sidebarSway {
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    25% {
+        transform: translateY(0) rotate(calc(-1 * #{$sidebar-sway-angle}));
+    }
+    75% {
+        transform: translateY(0) rotate($sidebar-sway-angle);
+    }
+}
+
+@keyframes wireCoilSpring {
+    0% {
+        transform: scaleY(0.55);
+    }
+    15% {
+        transform: scaleY(1.45);
+    }
+    35% {
+        transform: scaleY(0.72);
+    }
+    52% {
+        transform: scaleY(1.28);
+    }
+    67% {
+        transform: scaleY(0.85);
+    }
+    80% {
+        transform: scaleY(1.15);
+    }
+    90% {
+        transform: scaleY(0.92);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes controllerFollowWire {
+    0% {
+        transform: translateY(calc((0.55 - 1) * var(--sidebar-wire-height)));
+    }
+    15% {
+        transform: translateY(calc((1.45 - 1) * var(--sidebar-wire-height)));
+    }
+    35% {
+        transform: translateY(calc((0.72 - 1) * var(--sidebar-wire-height)));
+    }
+    52% {
+        transform: translateY(calc((1.28 - 1) * var(--sidebar-wire-height)));
+    }
+    67% {
+        transform: translateY(calc((0.85 - 1) * var(--sidebar-wire-height)));
+    }
+    80% {
+        transform: translateY(calc((1.15 - 1) * var(--sidebar-wire-height)));
+    }
+    90% {
+        transform: translateY(calc((0.92 - 1) * var(--sidebar-wire-height)));
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 
 @media (prefers-reduced-motion: reduce) {
     *,

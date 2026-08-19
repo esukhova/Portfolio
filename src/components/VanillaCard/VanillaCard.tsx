@@ -1,16 +1,22 @@
-import {Project} from "@/types/project";
+import {ProjectType} from "@/types/Project.type";
 import {asset} from "@/utils/asset";
 import {StatsBar} from "@/components/StatsBar/StatsBar";
 
-export function LandingCard(props: {landing: Project}) {
-
-    return (
-        <li className="landing__item _anim-items _anim-no-hide _active">
-            <a className="landing__item-link" href={props.landing.url} target="_blank" rel="noopener">
-                <img src={asset('images/' + props.landing.image)} alt={props.landing.title} title={props.landing.title}/>
-                <div className="landing__item-description">{props.landing.title}</div>
-                {props.landing.stats && <StatsBar stats={props.landing.stats} />}
-            </a>
-        </li>
-    )
+export function VanillaCard(props: { vanilla?: ProjectType, default?: string }) {
+    if (props.default) {
+        return (
+            <div className="vanilla__item vanilla__item--default"></div>
+        )
+    } else if (props.vanilla) {
+        return (
+            <li className="vanilla__item">
+                <a className="vanilla__item-link" href={props.vanilla.url} target="_blank" rel="noopener">
+                    <img src={asset('images/' + props.vanilla.image)} alt={props.vanilla.title}
+                         title={props.vanilla.title}/>
+                    <div className="vanilla__item-description">{props.vanilla.title}</div>
+                    {props.vanilla.stats && <StatsBar stats={props.vanilla.stats}/>}
+                </a>
+            </li>
+        )
+    }
 }

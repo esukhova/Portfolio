@@ -4,44 +4,50 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import {getProjects} from "@/utils/projects";
-import {SpaCard} from "@/components/SpaCard/SpaCard";
+import {FrameworkCard} from "@/components/FrameworkCard/FrameworkCard";
 import {useMediaQuery} from "@/hooks/useMediaQuery";
 
-export function Spa() {
+export function Framework() {
 
     const isMobile = useMediaQuery('(max-width: 767px)');
     return (
-        <section className="spa" id="spa">
-            <div className="spa__container container">
-                <h2 className="spa__title title title--type_h2 sign">
-                    <span className="fast-flicker">S</span>PA
+        <section className="framework" id="framework">
+            <div className="framework__container container _anim-on-scroll">
+                <h2 className="framework__title title title--type_h2 flicker-1">
+                    <span className="flicker-3">Fr</span>
+                    <span>amew</span>
+                    <span className="flicker-2">o</span>
+                    <span>rk проекты</span>
                 </h2>
-                <div className="spa__swiper-outer swiper-outer">
+                <div className="framework__swiper-outer swiper-outer">
                     <Swiper
                         key={!isMobile ? 'with-default-slides' : 'no-default-slides'}
                         modules={[Navigation, Pagination]}
-                        className="spa__swiper swiper"
+                        className="framework__swiper swiper"
                         slidesPerView={2}
                         spaceBetween={30}
                         loop={true}
                         pagination={{
-                            el: '.spa .pagination',
+                            el: '.framework .pagination',
                             type: 'bullets',
                             clickable: true,
                         }}
                         navigation={{
-                            nextEl: '.spa .button-next',
-                            prevEl: '.spa .button-prev',
+                            nextEl: '.framework .button-next',
+                            prevEl: '.framework .button-prev',
                         }}
                         breakpoints={{
                             500: {
                                 slidesPerView: 3,
                             },
-                            800: {
+                            700: {
                                 slidesPerView: 4,
                             },
-                            900: {
+                            800: {
                                 slidesPerView: 5,
+                            },
+                            900: {
+                                slidesPerView: 6,
                             },
                             1400: {
                                 slidesPerView: 7,
@@ -50,20 +56,20 @@ export function Spa() {
                                 slidesPerView: 8,
                             },
                         }}>
-                        {getProjects('spa').map(p => (
+                        {getProjects('framework').map(p => (
                             <SwiperSlide key={p.id} className="swiper__slide">
-                                <SpaCard spa={p}/>
+                                <FrameworkCard framework={p}/>
                             </SwiperSlide>
                         ))}
                         {!isMobile && (
                             [1, 2, 3, 1].map((n, i) =>
                                 <SwiperSlide key={`${n}-${i}`} className="swiper__slide">
-                                    <SpaCard default={`default-${n}`}/>
+                                    <FrameworkCard default={`default-${n}`}/>
                                 </SwiperSlide>
                             )
-                            )}
+                        )}
                     </Swiper>
-                    <button className="spa__swiper-button-prev swiper__button-prev button-prev"
+                    <button className="framework__swiper-button-prev swiper__button-prev button-prev"
                             aria-label="Предыдущий слайд">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-hidden="true">
                             <g data-name="05-Play">
@@ -79,7 +85,7 @@ export function Spa() {
                             </g>
                         </svg>
                     </button>
-                    <button className="spa__swiper-button-next swiper__button-next button-next"
+                    <button className="framework__swiper-button-next swiper__button-next button-next"
                             aria-label="Следующий слайд">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-hidden="true">
                             <g data-name="05-Play">
@@ -95,7 +101,7 @@ export function Spa() {
                             </g>
                         </svg>
                     </button>
-                    <div className="spa__swiper-pagination swiper__pagination pagination"></div>
+                    <div className="framework__swiper-pagination swiper__pagination pagination"></div>
                 </div>
             </div>
         </section>
