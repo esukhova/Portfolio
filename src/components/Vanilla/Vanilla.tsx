@@ -2,7 +2,7 @@ import {getProjects} from "@/utils/projects";
 import {VanillaCard} from "@/components/VanillaCard/VanillaCard";
 import {STATS_KEYS} from "@/types/Project.type";
 import {Swiper, SwiperSlide} from "swiper/react";
-import {Navigation, Pagination, Autoplay} from "swiper/modules";
+import {Navigation, Pagination} from "swiper/modules";
 import {asset} from "@/utils/asset";
 
 export function Vanilla() {
@@ -18,12 +18,11 @@ export function Vanilla() {
                 </h2>
                 <div className="vanilla__swiper-outer swiper-outer">
                     <Swiper
-                        modules={[Navigation, Pagination, Autoplay]}
+                        modules={[Navigation, Pagination]}
                         className="vanilla__swiper swiper"
                         slidesPerView={1.5}
                         spaceBetween={0}
                         loop={false}
-                        autoplay={false}
                         pagination={{
                             el: '.vanilla .pagination',
                             type: 'bullets',
