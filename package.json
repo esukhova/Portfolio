@@ -8,8 +8,8 @@
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
-    "images:webp": "node src/scripts/webp.mjs",
-    "stats:update": "node src/scripts/update-stats.mjs"
+    "images:webp": "node scripts/webp.mjs",
+    "stats:update": "node scripts/update-stats.mjs"
   },
   "browserslist": [
     "cover 99.5%"
