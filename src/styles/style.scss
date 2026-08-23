@@ -235,6 +235,7 @@
 
     &__controller-button {
         appearance: none;
+        outline: none;
         width: 100%;
         height: clamp-f(15, 30);
         border-radius: clamp-f(6, 10);
@@ -263,6 +264,7 @@
 
     &__controller-boombutton {
         appearance: none;
+        outline: none;
         width: clamp-f(20, 55, 360, 992);
         height: clamp-f(20, 55, 360, 992);
         border-radius: 50%;
@@ -817,11 +819,19 @@
             top: 65px;
             left: calc(-50vw + 50% + 15px);
             width: clamp-f(40, 70);
+
+            @include mobile {
+                left: 3px;
+            }
         }
 
         .button-next {
             left: unset;
             right: calc(-1 * (100vw - 100%) / 2 + 15px);
+
+            @include mobile {
+                right: 3px;
+            }
         }
     }
 
