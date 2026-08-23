@@ -46,30 +46,19 @@
     }
 }
 
-@mixin container($height, $flex-direction) {
-    height: $height;
-    flex-direction: $flex-direction;
-}
-
 @mixin divs($bgColorDivLeft, $bgColorDivRight) {
     .leftDiv {
         display: flex;
         align-items: center;
-        justify-content: center;
         background: $bgColorDivLeft;
         height: 100%;
         flex: 0 0 30%;
-        text-align: center;
-        @media (min-width: 1200px) {
-            justify-content: flex-start;
-        }
     }
 
     .rightDiv {
         background: $bgColorDivRight;
         height: 100%;
         display: flex;
-        align-items: center;
         flex: 0 0 70%;
     }
 }

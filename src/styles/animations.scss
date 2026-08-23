@@ -417,4 +417,9 @@ $sidebar-spring-timing: $sidebar-spring-duration $sidebar-spring-delay both;
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
     }
+
+    ._anim {
+        opacity: 1 !important;
+        transform: unset !important;
+    }
 }

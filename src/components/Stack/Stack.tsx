@@ -13,7 +13,7 @@ export function Stack() {
                         </div>
                     </div>
                 </div>
-                <ul className="rightDiv">
+                <ul className="rightDiv _anim-on-scroll">
                     {stack.map(item => (
                         <li className="stack__item" key={item}>{item}</li>
                     ))}

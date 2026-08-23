@@ -5,23 +5,23 @@ export function Footer() {
         <footer className="footer" id="contacts">
             <div className="footer__container container">
                 <div className="leftDiv">
-                    <div className="address-item-container _anim-on-scroll">
-                        <div className="address-item address-item--gh">
+                    <div className="address__items _anim-on-scroll">
+                        <div className="address__item address-item address__item address-item--gh">
                             <a href="https://github.com/esukhova" target="_blank" rel="noopener">
                                 <img src={asset('images/github.svg')} width="100" height="100" alt="GitHub"/>
                             </a>
                         </div>
-                        <div className="address-item address-item--mail">
+                        <div className="address__item address-item address__item address-item--mail">
                             <a href="mailto:e_ukhova@inbox.ru?subject=Отклик%20на%20резюме&body=Здравствуйте!%20Нам%20очень%20понравилось%20ваше%20портфолио!">
                                 <img src={asset('images/mail.svg')} width="64" height="64" alt="Электронная почта"/>
                             </a>
                         </div>
-                        <div className="address-item address-item--vk">
+                        <div className="address__item address-item address__item address-item--vk">
                             <a href="https://vk.com/hi_and_goodbye" target="_blank" rel="noopener">
                                 <img src={asset('images/vk.svg')} width="24" height="24" alt="ВКонтакте"/>
                             </a>
                         </div>
-                        <div className="address-item address-item--tg">
+                        <div className="address__item address-item address__item address-item--tg">
                             <a href="https://t.me/kate_ukhova" target="_blank" rel="noopener">
                                 <img src={asset('images/tg.svg')} width="25" height="21" alt="Телеграмм"/>
                             </a>

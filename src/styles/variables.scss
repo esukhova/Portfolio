@@ -3,8 +3,10 @@
 
 $font-family: (
     'title-h1': ('DuskDemon', sans-serif),
-    'title': ('NTSomic', sans-serif),
-    'text': ('NTSomic', sans-serif),
+    'title': ('Gabriela', sans-serif),
+    'text': ('Cascadia Code', sans-serif),
+    'stack': ('Shantell Sans', sans-serif),
+    'vanilla': ('Comic Relief', sans-serif),
 );
 
 $font-size: (
@@ -12,21 +14,21 @@ $font-size: (
         'h1': 64,
         'h2': 48,
         'h3': 30,
-        'body': 20,
+        'body': 18,
         'big': 24,
     ),
     'small-desktop': (
         'h1': 48,
         'h2': 48,
         'h3': 34,
-        'body': 20,
+        'body': 18,
         'big': 24,
     ),
     'tablet': (
         'h1': 120,
         'h2': 48,
         'h3': 34,
-        'body': 20,
+        'body': 18,
         'big': 24,
     ),
     'mobile': (
