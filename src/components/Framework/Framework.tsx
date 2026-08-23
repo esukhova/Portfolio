@@ -58,7 +58,7 @@ export function Framework() {
                         }}>
                         {getProjects('framework').map(p => (
                             <SwiperSlide key={p.id} className="swiper__slide">
-                                <FrameworkCard framework={p} color='yellow'/>
+                                <FrameworkCard framework={p}/>
                             </SwiperSlide>
                         ))}
                         {!isMobile && (
