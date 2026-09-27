@@ -3,10 +3,11 @@ import {useMediaQuery} from "@/hooks/useMediaQuery";
 
 export function useParallaxAttr(selector = '[data-parallax]') {
     const prefersReducedMotion = useMediaQuery('(prefers-reduced-motion: reduce)');
+    const isTabletDown = useMediaQuery('(max-width: 991px)');
 
     useEffect(() => {
 
-        if (prefersReducedMotion) {
+        if (prefersReducedMotion || isTabletDown) {
             document.querySelectorAll<HTMLElement>(selector).forEach((el) => {
                 el.style.setProperty('--parallax-offset', '0px');
             });

@@ -139,9 +139,14 @@
         }
     }
 
-    @media (prefers-reduced-motion: reduce) {
-        [data-parallax] {
+    [data-parallax] {
+
+        @media (prefers-reduced-motion: reduce) {
             bottom: 0;
+        }
+
+        @include tablet {
+            bottom: -50px;
         }
     }
 }
@@ -427,7 +432,7 @@
         }
 
         &:nth-child(3) {
-            margin-bottom:  clamp-f(10, 12);
+            margin-bottom: clamp-f(10, 12);
         }
     }
 
