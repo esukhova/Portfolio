@@ -1,17 +1,17 @@
 [
     {
-        "id": "home-decor",
-        "title": "HOME DECOR",
+        "id": "itstorm",
+        "title": "АйтиШторм",
         "category": "framework",
         "framework": "angular",
-        "url": "https://esukhova.github.io/HOME-DECOR/",
-        "repo": "esukhova/HOME-DECOR",
-        "image": "home-decor.svg",
-        "description": "HOME DECOR",
+        "url": "https://itstorm.shop",
+        "repo": "esukhova/ITStorm",
+        "image": "itstorm.svg",
+        "description": "АйтиШторм",
         "stats": {
-            "HTML/PUG": 28.8,
-            "SCSS": 14.8,
-            "JS/TS": 56.4
+            "HTML/PUG": 43.9,
+            "SCSS": 26.7,
+            "JS/TS": 29.4
         }
     },
     {
@@ -30,33 +30,27 @@
         }
     },
     {
-        "id": "itstorm",
-        "title": "АйтиШторм",
-        "category": "framework",
-        "framework": "angular",
-        "url": "https://esukhova.github.io/ITStorm/",
-        "repo": "esukhova/ITStorm",
-        "image": "itstorm.svg",
-        "description": "АйтиШторм",
-        "stats": {
-            "HTML/PUG": 43.9,
-            "SCSS": 26.7,
-            "JS/TS": 29.4
-        }
-    },
-    {
-        "id": "sneakers",
-        "title": "SNEAKERS",
+        "id": "food-diary",
+        "title": "Дневник питания",
         "category": "framework",
         "framework": "vue",
-        "url": "https://esukhova.github.io/vue-sneakers/",
-        "repo": "esukhova/vue-sneakers",
-        "image": "vue-sneakers.svg",
-        "description": "SNEAKERS",
+        "url": "https://pitaniebws19.tutorplace.ru/",
+        "image": "food-diary.svg",
+        "description": "Дневник питания"
+    },
+    {
+        "id": "home-decor",
+        "title": "HOME DECOR",
+        "category": "framework",
+        "framework": "angular",
+        "url": "https://h-decor.shop",
+        "repo": "esukhova/HOME-DECOR",
+        "image": "home-decor.svg",
+        "description": "HOME DECOR",
         "stats": {
-            "HTML/PUG": 1.8,
-            "SCSS": 0.6,
-            "JS/TS": 97.6
+            "HTML/PUG": 28.8,
+            "SCSS": 14.8,
+            "JS/TS": 56.4
         }
     },
     {

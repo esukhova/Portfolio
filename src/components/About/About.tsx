@@ -4,7 +4,7 @@ export function About() {
             <div className="about__container container">
                 <div className="about__text about__text--white _anim-on-scroll">
                     <h3 className="about__text-title">Здравствуйте!</h3>
-                    <p>Я — frontend-разработчик из&nbsp;<b>Санкт&#8209;Петербурга</b> с&nbsp;2&nbsp;годами
+                    <p>Я — frontend-разработчик из&nbsp;<b>Санкт&#8209;Петербурга</b>, имею 2&nbsp;года
                         коммерческого опыта. Разрабатываю быстрые, удобные и&nbsp;поддерживаемые интерфейсы,
                         уделяя внимание качеству кода, производительности и&nbsp;архитектуре проекта.
                     </p>
@@ -28,19 +28,18 @@ export function About() {
                 <div className="rightDiv">
                     <div className="about__text about__text--blue _anim-on-scroll">
                         <h3 className="about__text-title">Опыт и&nbsp;экспертиза</h3>
-                        <p className="about__text-subtitle">Основной стек: Vue, Angular,
-                            JavaScript/TypeScript.</p>
+                        <p className="about__text-subtitle">Основной стек: Angular</p>
+                        <p className="about__text-subtitle">В постоянной работе: Vue, JavaScript/TypeScript.</p>
                         <ul className="about__items">
+                            <li className="about__item">Angular: разработка интернет-магазинов и сложных
+                                пользовательских интерфейсов
+                            </li>
                             <li className="about__item">Vue: разработка компонентов, работа с Vuex, сервисами и
                                 сторонними
                                 библиотеками
                             </li>
-                            <li className="about__item">Angular: разработка интернет-магазинов и сложных
-                                пользовательских интерфейсов
-                            </li>
                         </ul>
-                        <p className="about__text-bottom">Открыта к&nbsp;предложениям по&nbsp;работе с&nbsp;технологиями из&nbsp;моего стека.
-                        </p>
+                        <p className="about__text-bottom">Открыта к&nbsp;коммерческим предложениям!</p>
                     </div>
                 </div>
             </div>
