@@ -24,9 +24,9 @@
         "image": "tea.svg",
         "description": "Tea App",
         "stats": {
-            "HTML/PUG": 34.3,
-            "SCSS": 9.5,
-            "JS/TS": 56.2
+            "HTML/PUG": 34.1,
+            "SCSS": 9,
+            "JS/TS": 56.9
         }
     },
     {
