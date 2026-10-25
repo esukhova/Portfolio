@@ -47,11 +47,7 @@ const CORD_LAYERS = [
     'sidebar__svg-path2',
 ] as const;
 
-type SidebarProps = {
-    onBoom?: () => void;
-};
-
-export function Sidebar({onBoom}: SidebarProps) {
+export function Sidebar() {
     return (
         <div className="sidebar">
             <div className="sidebar__wrapper">
@@ -71,12 +67,6 @@ export function Sidebar({onBoom}: SidebarProps) {
                         <a href="#framework" className="sidebar__controller-button">проекты</a>
                         <a href="#contacts" className="sidebar__controller-button">контакты</a>
                     </nav>
-                    <button
-                        type="button"
-                        className="sidebar__controller-boombutton"
-                        aria-label="Взорвать билборд"
-                        onClick={onBoom}
-                    />
                 </div>
             </div>
         </div>

@@ -279,15 +279,6 @@
 
 /*---INTRO ELEMENTS--------------------------------------------------------------------------------*/
 
-@keyframes fall {
-    0% {
-        transform: translateX(-50%) translateY(0);
-    }
-    100% {
-        transform: translateX(-50%) translateY(35%) rotate(30deg);
-    }
-}
-
 @keyframes textShadow {
     0% {
         text-shadow:

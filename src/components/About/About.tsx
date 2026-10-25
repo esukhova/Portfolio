@@ -1,4 +1,56 @@
 export function About() {
+    const params = new URLSearchParams(window.location.search);
+    const utmFramework = params.get("utm_fr");
+
+    const frameworkTexts = {
+        vue: {
+            subtitle1: "Основной стек: Vue",
+            subtitle2: "В постоянной работе: Angular, React, JavaScript/TypeScript.",
+        },
+        angular: {
+            subtitle1: "Основной стек: Angular",
+            subtitle2: "В постоянной работе: Vue, React, JavaScript/TypeScript.",
+        },
+    };
+
+    const defaultTexts = frameworkTexts.angular;
+
+    const texts =
+        utmFramework && utmFramework in frameworkTexts
+            ? frameworkTexts[utmFramework as keyof typeof frameworkTexts]
+            : defaultTexts;
+
+    const frameworkItems = [
+        {
+            key: "angular",
+            text: (
+                <>
+                    Angular: разработка интернет-магазинов и сложных
+                    пользовательских интерфейсов
+                </>
+            ),
+        },
+        {
+            key: "vue",
+            text: (
+                <>
+                    Vue: разработка компонентов, работа с Vuex, сервисами и
+                    сторонними библиотеками
+                </>
+            ),
+        },
+        {
+            key: "react",
+            text: <>React: разработка небольших сайтов</>,
+        },
+    ];
+
+    const sortedFrameworkItems =
+        utmFramework === "vue"
+            ? [frameworkItems[1], frameworkItems[0], frameworkItems[2]]
+            : frameworkItems;
+
+
     return (
         <section id="about" className="about">
             <div className="about__container container">
@@ -28,16 +80,14 @@ export function About() {
                 <div className="rightDiv">
                     <div className="about__text about__text--blue _anim-on-scroll">
                         <h3 className="about__text-title">Опыт и&nbsp;экспертиза</h3>
-                        <p className="about__text-subtitle">Основной стек: Angular</p>
-                        <p className="about__text-subtitle">В постоянной работе: Vue, JavaScript/TypeScript.</p>
+                        <p className="about__text-subtitle">{texts.subtitle1}</p>
+                        <p className="about__text-subtitle">{texts.subtitle2}</p>
                         <ul className="about__items">
-                            <li className="about__item">Angular: разработка интернет-магазинов и сложных
-                                пользовательских интерфейсов
-                            </li>
-                            <li className="about__item">Vue: разработка компонентов, работа с Vuex, сервисами и
-                                сторонними
-                                библиотеками
-                            </li>
+                            {sortedFrameworkItems.map(item => (
+                                <li className="about__item" key={item.key}>
+                                    {item.text}
+                                </li>
+                            ))}
                         </ul>
                         <p className="about__text-bottom">Открыта к&nbsp;коммерческим предложениям!</p>
                     </div>
