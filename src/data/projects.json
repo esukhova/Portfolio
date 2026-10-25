@@ -54,13 +54,13 @@
         }
     },
     {
-        "id": "anti-cellulite",
-        "title": "Анти-целлюлит",
+        "id": "matrix",
+        "title": "Матрица судьбы",
         "category": "framework",
         "framework": "vue",
-        "url": "https://cellulitebw.tutorplace.ru/",
-        "image": "anti-cellulite.svg",
-        "description": "Анти-целлюлит"
+        "url": "https://matrixsm6.tutorplace.ru/",
+        "image": "matrix.svg",
+        "description": "Матрица судьбы"
     },
     {
         "id": "neural-networks",
