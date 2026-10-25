@@ -1,6 +1,10 @@
-import {stack} from "@/data/stack";
+import {stackAngular, stackVue} from "@/data/stack";
 
 export function Stack() {
+    const params = new URLSearchParams(window.location.search);
+    const utmFramework = params.get("utm_fr");
+    const stack = utmFramework === 'vue' ? stackVue : stackAngular;
+
     return (
         <section id="stack" className="stack">
             <div className="stack__container container">
